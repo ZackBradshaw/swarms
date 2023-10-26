@@ -21,6 +21,8 @@ latest_caption = ""
 standard_suffix = ""
 storyboard = []
 
+caption = "Create comic about opensourcerer a robot wizard"
+
 def generate_images_with_bingchat(caption):
     img_path = model.create_img(caption)
     img_urls = model.images(caption)
