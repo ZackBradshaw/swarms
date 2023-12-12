@@ -4,7 +4,7 @@ import time
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Callable
 from swarms.structs.agent import Agent
-from swarms.agents.base import AbstractWorker
+# from swarms.agents.base import AbstractWorker
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
 from termcolor import colored
