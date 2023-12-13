@@ -1,6 +1,8 @@
 import asyncio
 import base64
 import concurrent.futures
+import logging
+import os
 import time
 from abc import abstractmethod
 from concurrent.futures import ThreadPoolExecutor
@@ -10,6 +12,14 @@ from typing import List, Optional, Tuple
 import requests
 from PIL import Image
 from termcolor import colored
+
+try:
+    import cv2
+except ImportError:
+    print(
+        "Error importing cv2 try installing it with `pip install"
+        " opencv-python`"
+    )
 
 
 class BaseMultiModalModel:
@@ -88,10 +98,6 @@ class BaseMultiModalModel:
         self.meta_prompt = meta_prompt
         self.chat_history = []
 
-    def __call__(self, task: str, img: str, *args, **kwargs):
-        """Run the model"""
-        return self.run(task, img, *args, **kwargs)
-
     @abstractmethod
     def run(
         self, task: Optional[str], img: Optional[str], *args, **kwargs
@@ -99,7 +105,21 @@ class BaseMultiModalModel:
         """Run the model"""
         pass
 
-    async def arun(self, task: str, img: str):
+    def __call__(
+        self, task: str = None, img: str = None, *args, **kwargs
+    ):
+        """Call the model
+
+        Args:
+            task (str): _description_
+            img (str): _description_
+
+        Returns:
+            _type_: _description_
+        """
+        return self.run(task, img, *args, **kwargs)
+
+    async def arun(self, task: str, img: str, *args, **kwargs):
         """Run the model asynchronously"""
         pass
 
@@ -125,6 +145,42 @@ class BaseMultiModalModel:
         """Get the image from the path"""
         image_pil = Image.open(img)
         return image_pil
+
+    def process_video(
+        self,
+        video_path: str = None,
+        type_img: str = ".jpg",
+        *args,
+        **kwargs,
+    ):
+        """Process a video
+
+        Args:
+            video_path (str, optional): _description_. Defaults to None.
+            type_img (str, optional): _description_. Defaults to ".jpg".
+            *args: _description_.
+            **kwargs: _description_.
+
+        """
+        try:
+            video = cv2.VideoCapture(video_path)
+
+            base64Frames = []
+            while video.isOpened():
+                success, frame = video.read()
+                if not success:
+                    break
+                _, buffer = cv2.imencode(type_img, frame)
+                base64Frames.append(
+                    base64.b64encode(buffer).decode("utf-8")
+                )
+
+            video.release()
+            print(len(base64Frames), "frames read")
+            return base64Frames
+        except Exception as error:
+            print(f"Error processing video {error} try again")
+            raise error
 
     def clear_chat_history(self):
         """Clear the chat history"""
@@ -273,13 +329,13 @@ class BaseMultiModalModel:
         content = colored(content, color)
         print(content)
 
-    def stream(self, content: str):
+    def stream_response(self, text: str):
         """Stream the output
 
         Args:
             content (str): _description_
         """
-        for chunk in content:
+        for chunk in text:
             print(chunk)
 
     def meta_prompt(self):
