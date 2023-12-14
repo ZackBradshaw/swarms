@@ -2,6 +2,7 @@ import logging
 import os
 import warnings
 import sys
+import swarms
 
 
 def disable_logging():
