@@ -9,10 +9,7 @@ video/
 dataframe/
 
 static/generated
-<<<<<<< HEAD
-=======
 runs
->>>>>>> master
 swarms/__pycache__
 venv
 .DS_Store
@@ -23,10 +20,7 @@ swarms/agents/.DS_Store
 _build
 stderr_log.txt
 
-<<<<<<< HEAD
-=======
 .vscode
->>>>>>> master
 .DS_STORE
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -39,15 +33,10 @@ error.txt
 *.so
 .ruff_cache
 
-
+# 
 errors.txt
 
-<<<<<<< HEAD
-models/
-
-=======
 Autonomous-Agent-XYZ1B_state.json
->>>>>>> master
 # Distribution / packaging
 .Python
 build/

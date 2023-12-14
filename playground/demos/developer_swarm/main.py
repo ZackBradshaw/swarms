@@ -16,6 +16,7 @@ Documentation agent -> Tests agent
 """
 import os
 
+from pathlib import Path
 from dotenv import load_dotenv
 
 from swarms.models import OpenAIChat
@@ -28,11 +29,15 @@ api_key = os.getenv("OPENAI_API_KEY")
 
 TASK = """
 CODE
-
+def call_api(self, endpoint, params):
+        base_url = "http://127.0.0.1:8079/tools/"  # Replace with your base URL
+        url = base_url + endpoint + "/"
+        response = requests.post(url, json=params)
+        return response.json()
 """
 
 # Initialize the language model
-llm = OpenAIChat(openai_api_key=api_key, max_tokens=5000)
+llm = OpenAIChat(openai_api_key=api_key)
 
 
 # Documentation agent
@@ -47,7 +52,7 @@ documentation_agent = Agent(
 tests_agent = Agent(
     llm=llm,
     sop=TEST_SOP,
-    max_loops=2,
+    max_loops=1,
 )
 
 
@@ -56,6 +61,17 @@ documentation = documentation_agent.run(
     f"Write documentation for the following code:{TASK}"
 )
 
+# # If the documentation is not empty, write it to a file
+# if documentation:
+#     file_path = Path('./workspace/documentation.txt')
+#     if not file_path.exists():
+#         params = {
+#             'file_path': str(file_path),
+#             'operation': 'write',
+#             'content': documentation,
+#         }
+#         documentation_agent.call_api('file_operation', params)
+        
 # Run the tests agent
 tests = tests_agent.run(
     f"Write tests for the following code:{TASK} here is the"

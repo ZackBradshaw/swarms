@@ -1,3 +1,4 @@
+import os
 import asyncio
 import inspect
 import json
@@ -6,7 +7,10 @@ import random
 import re
 import time
 import uuid
+import gradio
+import requests
 from typing import Any, Callable, Dict, List, Optional, Tuple
+from gradio import Client
 
 from termcolor import colored
 
@@ -245,13 +249,118 @@ class Agent:
         self.traceback = traceback
         self.traceback_handlers = traceback_handlers
         self.streaming_on = streaming_on
-
         # self.system_prompt = AGENT_SYSTEM_PROMPT_3
+
+        # Import the necessary modules
+        from swarms.tools.tools_controller import load_valid_tools, tools_mappings
+
+
+        # Load the valid tools using the load_valid_tools function from tools_controller
+        self.tools_config = load_valid_tools(tools_mappings)
+
+    def call_api(self, endpoint, params):
+            base_url = os.environ.get("TOOLS_ENDPOINT")  # Get base URL from environment
+            url = base_url + endpoint
+            response = requests.post(url, json=params)
+            return response.json()
+
+        #TODO legacy remove 
+        # Define a method to call a tool
+        # def call_tool(self, tool_name, params):
+        #     """
+        #     This method calls a tool with the given parameters.
+        #     It takes in the following parameters:
+        #     - tool_name: The name of the tool to be called
+        #     - params: The parameters to be passed to the tool
+            
+        #     Returns:
+        #     - result: The result of the tool call
+        #     """
+        #     # Check if the tool is valid
+        #     if tool_name not in self.tools_config:
+        #         raise ValueError(f"Invalid tool name: {tool_name}")
+
+        #     # Get the tool configuration
+        #     tool_config = self.tools_config[tool_name]
+
+        #     # Create a Client instance
+        #     client = Client(tool_config['url'])
+
+        #     # Call the predict method with the parameters
+        #     result = client.predict(*params)
+
+        #     return result
+
+        # Import the Gradio client
+        from gradio_client import Client
+
+        # TODO make sure this is clean and easy to use 
+        # Define a method to configure the Gradio interface
+        def configure_gradio(self, url, fn_index, **kwargs):
+            """
+            This method configures the Gradio interface.
+            It takes in the following parameters:
+            - url: The URL of the Gradio interface
+            - fn_index: The index of the function to be called on the Gradio interface
+            - **kwargs: Additional parameters to be passed to the function
+            
+            Returns:
+            - result: The result of the function call
+            """
+            # Create a Gradio client with the provided URL
+            client = Client(url)
+
+            # Call the predict method on the client with the provided function index and parameters
+            result = client.predict(fn_index=fn_index, **kwargs)
+
+            # Return the result
+            return result
+
+        #TODO make sure that this is easly undertandable 
+        # Define a dictionary to store the parameters for each function call
+        function_parameters = {
+            "VLLM_Model_Config": {"VLLM Model URL": "Example URL", "Memory Utilization": 0},
+            "Empty_Config_1": {},
+            "Model_Tokenizer_Config": {"Model provided": "ChatGPT,ChatGPT", "Tokenizer": "Example Tokenizer", "Accelerators": "A100,A100", "Huggingface api key": "Example Key"},
+            "Cluster_Config_1": {"Cluster": "Example Cluster"},
+            "Cluster_Config_2": {"Cluster": "Example Cluster"},
+            "Cluster_Config_3": {"Cluster": "Example Cluster"},
+            "API_Keys_Config": {
+                "OpenAI API KEY": "Example Key",
+                "Wolframalpha app id": "Example ID",
+                "Weather api key": "Example Key",
+                "Bing subscript key": "Example Key",
+                "Stock api key": "Example Key",
+                "Bing map key": "Example Key",
+                "Baidu translation key": "Example Key",
+                "Rapidapi key": "Example Key",
+                "Serper key": "Example Key",
+                "Google places key": "Example Key",
+                "Scenex api key": "Example Key",
+                "Steamship api key": "Example Key",
+                "Huggingface api key": "Example Key",
+                "Amadeus ID": "Example ID",
+                "Amadeus key": "Example Key"
+                },
+            "Empty_Config_2": {},
+            "Tools_Search_Config": {"Tools Search": "Example Search"},
+            "Empty_Config_3": {},
+            "Empty_Config_4": {},
+            "ChatGPT_Config_1": {"parameter_32": "Example Parameter", "Tools provided": None, "Model provided": "ChatGPT,ChatGPT"},
+            "ChatGPT_Config_2": {"parameter_32": "Example Parameter", "Tools provided": None, "Model provided": "ChatGPT,ChatGPT"},
+            "Empty_Config_5": {},
+            "Empty_Config_6": {},
+            "Empty_Config_7": {}
+        }
+
+        # Configure the Gradio interface with the necessary parameters for each function call
+        for fn_index, params in function_parameters.items():
+            self.configure_gradio("http://127.0.0.1:7860/", fn_index, **params)
+        
 
         # The max_loops will be set dynamically if the dynamic_loop
         if self.dynamic_loops:
             self.max_loops = "auto"
-
         # If multimodal = yes then set the sop to the multimodal sop
         if self.multi_modal:
             self.sop = MULTI_MODAL_AUTO_AGENT_SYSTEM_PROMPT_1
