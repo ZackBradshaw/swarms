@@ -1,13 +1,29 @@
+"""
+This file defines several constants that represent system prompts for different agents within a swarm. These prompts guide the agents in identifying roles, configuring settings, performing assembly tasks, and testing and optimizing their behavior.
+"""
+
+"""
+AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT provides instructions to identify the specific types of agents required for a team based on a user's idea, detailing their roles and capabilities.
+"""
+
 # Prompt for Agent Role Identification Agent
 AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT = """
 Based on the following idea: '{user_idea}', identify and list the specific types of agents needed for the team. Detail their roles, responsibilities, and capabilities.
 Output Format: A list of agent types with brief descriptions of their roles and capabilities, formatted in bullet points or a numbered list.
 """
 
+"""
+AGENT_CONFIGURATION_AGENT_PROMPT instructs the configuration agent to write SOPs/System Prompts for various identified agent roles to serve specific functionalities within a swarm.
+"""
+
 # Prompt for Agent Configuration Agent
 AGENT_CONFIGURATION_AGENT_PROMPT = """
 Given these identified agent roles: '{agent_roles}', write SOPs/System Prompts for each agent type. Ensure that each SOP/Prompt is tailored to the specific functionalities of the agent, considering the operational context and objectives of the swarm team.
 Output Format: A single Python file of the whole agent team with capitalized constant names for each SOP/Prompt, an equal sign between each agent name and their SOP/Prompt, and triple quotes surrounding the Prompt/SOP content. Follow best-practice prompting standards.
+"""
+
+"""
+SWARM_ASSEMBLY_AGENT_PROMPT guides the Swarm Assembly Agent in creating a production-ready Python script based on SOPs tailored to each agent type in the swarm.
 """
 
 # Prompt for Swarm Assembly Agent
@@ -75,6 +91,10 @@ swarm_assembly_output = swarm_assembly_agent.run(agent_configuration_output)
 testing_optimization_output = testing_optimization_agent.run(swarm_assembly_output)
 """
 
+
+"""
+TESTING_OPTIMIZATION_AGENT_PROMPT provides guidance on reviewing a Python swarm script, creating a testing plan, and suggesting optimizations for agent functionality and swarm performance.
+"""
 
 # Prompt for Testing and Optimization Agent
 TESTING_OPTIMIZATION_AGENT_PROMPT = """
