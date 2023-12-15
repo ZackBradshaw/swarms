@@ -1,0 +1,18 @@
+name: 'Poetry Setup'
+description: 'Setup Poetry for Python dependency management'
+inputs:
+  poetry-version:
+    description: 'Version of Poetry to install'
+    required: true
+    default: '1.1.8'
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Install Poetry'
+      shell: bash
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 - --version ${{ inputs.poetry-version }}
+    - name: 'Check Poetry Version'
+      shell: bash
+      run: |
+        poetry --version
