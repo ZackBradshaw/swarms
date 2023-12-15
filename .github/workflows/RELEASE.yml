@@ -19,7 +19,10 @@ jobs:
         && ${{ contains(github.event.pull_request.labels.*.name, 'release') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Setup Poetry
+        uses: ./.github/actions/poetry_setup
+        with:
+          poetry-version: ${{ env.POETRY_VERSION }}
       - name: Install poetry
         run: pipx install poetry==$POETRY_VERSION
       - name: Set up Python 3.10
