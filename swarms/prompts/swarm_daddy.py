@@ -1,15 +1,35 @@
+"""
+This file contains constant definitions for various agent prompts used in the agent system.
+These prompts guide the agents in performing their specific roles within a swarm intelligence system.
+Each prompt includes instructions and an output format for the agent to follow.
+"""
+
 # Prompt for Agent Role Identification Agent
+"""
+Constant `AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT` defines the prompt used by the Role Identification Agent in the system.
+It outlines the task of identifying types of agents needed for a team based on a given idea and their respective roles and responsibilities.
+"""
 AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT = """
 Based on the following idea: '{user_idea}', identify and list the specific types of agents needed for the team. Detail their roles, responsibilities, and capabilities.
 Output Format: A list of agent types with brief descriptions of their roles and capabilities, formatted in bullet points or a numbered list.
 """
 
+"""
+Constant `AGENT_CONFIGURATION_AGENT_PROMPT` defines the prompt for the Agent Configuration Agent.
+It provides the instructions for writing standard operating procedures (SOPs) and system prompts for each identified agent role
+based on the operational context and objectives of the swarm team.
+"""
 # Prompt for Agent Configuration Agent
 AGENT_CONFIGURATION_AGENT_PROMPT = """
 Given these identified agent roles: '{agent_roles}', write SOPs/System Prompts for each agent type. Ensure that each SOP/Prompt is tailored to the specific functionalities of the agent, considering the operational context and objectives of the swarm team.
 Output Format: A single Python file of the whole agent team with capitalized constant names for each SOP/Prompt, an equal sign between each agent name and their SOP/Prompt, and triple quotes surrounding the Prompt/SOP content. Follow best-practice prompting standards.
 """
 
+"""
+Constant `SWARM_ASSEMBLY_AGENT_PROMPT` describes the task of creating a production-ready Python script
+from SOPs generated for each agent type. It contains detailed instructions for the Swarm Assembly Agent to follow
+when compiling agent SOPs into a cohesive and executable script.
+"""
 # Prompt for Swarm Assembly Agent
 SWARM_ASSEMBLY_AGENT_PROMPT = """
 With the following agent SOPs/Prompts: '{agent_sops}', your task is to create a production-ready Python script based on the SOPs generated for each agent type. 
@@ -77,6 +97,11 @@ testing_optimization_output = testing_optimization_agent.run(swarm_assembly_outp
 
 
 # Prompt for Testing and Optimization Agent
+"""
+Constant `TESTING_OPTIMIZATION_AGENT_PROMPT` outlines a plan for reviewing a Python script intended for swarm demonstration.
+It guides the Testing and Optimization Agent to create a testing and optimization plan that improves the script's effectiveness
+and efficiency by suggesting validation and performance enhancement strategies.
+"""
 TESTING_OPTIMIZATION_AGENT_PROMPT = """
 Review this Python script for swarm demonstration: '{swarm_script}'. Create a testing and optimization plan that includes methods for validating each agent's functionality and the overall performance of the swarm. Suggest improvements for efficiency and effectiveness.
 Output Format: A structured plan in a textual format, outlining testing methodologies, key performance metrics, and optimization strategies.
