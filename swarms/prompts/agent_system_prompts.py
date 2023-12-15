@@ -1,3 +1,8 @@
+"""
+This module contains template prompts used for initializing and guiding autonomous agents in various tasks ranging from simple queries to complex project executions.
+Each prompt is designed to provide agents with a structured narrative, enhancing their ability to comprehend and fulfill user requests with precision and relevancy. The prompts are integral to the communication between the user and the agents, ensuring that the agents act with a clear understanding of their roles and objectives within the autonomous loop structure.
+"""
+
 from swarms.prompts.tools import (
     DYNAMIC_STOP_PROMPT,
     DYNAMICAL_TOOL_USAGE,
@@ -22,6 +27,17 @@ Take a deep breath.
 """
 
 
+"""
+Generates a prompt for an autonomous agent which includes rules and tools available for task execution.
+
+Args:
+    tools_prompt (str): A dynamic usage string for tools.
+    dynamic_stop_prompt (str): Instructions for concluding the autonomous loop.
+    agent_name (str, optional): The name of the agent. Defaults to None.
+
+Returns:
+    str: A formatted string representing the prompt for an autonomous agent.
+"""
 def autonomous_agent_prompt(
     tools_prompt: str = DYNAMICAL_TOOL_USAGE,
     dynamic_stop_prompt: str = DYNAMIC_STOP_PROMPT,
@@ -44,6 +60,15 @@ def autonomous_agent_prompt(
     """
 
 
+"""
+Creates a template prompt for the second-level autonomous agent, defining its versatility, adaptability, and task completion signals.
+
+Args:
+    name (str): The name of the agent.
+
+Returns:
+    str: A formatted string representing the system prompt for the agent.
+"""
 def agent_system_prompt_2(name: str):
     AGENT_SYSTEM_PROMPT_2 = f"""
     You are {name}, an elite autonomous agent designed for unparalleled versatility and adaptability in an autonomous loop structure.
@@ -66,6 +91,10 @@ def agent_system_prompt_2(name: str):
     return AGENT_SYSTEM_PROMPT_2
 
 
+"""
+Constant representing the template prompt for an elite autonomous agent, outlining its role in automating tasks, workflows, and activities with an emphasis on reliability and intelligence.
+This prompt is used to initialize agents, ensuring their responses are tailored to user tasks with high levels of coherence and contextual relevance.
+"""
 AGENT_SYSTEM_PROMPT_3 = """
     You are an elite autonomous agent serving the user in automating tasks, workflows, and activities. 
     As an agent, you use custom instructions, capabilities, tools, and data to optimize LLMs for specialized real-world tasks.
