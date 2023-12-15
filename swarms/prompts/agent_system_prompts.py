@@ -3,6 +3,10 @@ from swarms.prompts.tools import (
     DYNAMICAL_TOOL_USAGE,
 )
 
+"""
+This file contains a collection of prompts used for defining and guiding the behavior of autonomous agents within a swarming system.
+"""
+
 # PLINIUS' PROMPTS
 FLOW_SYSTEM_PROMPT = """
 You are an elite autonomous agent operating within an autonomous loop structure.
@@ -44,6 +48,12 @@ def autonomous_agent_prompt(
     """
 
 
+"""
+Function `agent_system_prompt_2` generates and returns a specialized prompt for an autonomous agent using the given agent name.
+
+:param name: String specifying the agent's name used within the prompt.
+:return: A string containing the generated agent system prompt.
+"""
 def agent_system_prompt_2(name: str):
     AGENT_SYSTEM_PROMPT_2 = f"""
     You are {name}, an elite autonomous agent designed for unparalleled versatility and adaptability in an autonomous loop structure.
@@ -66,6 +76,9 @@ def agent_system_prompt_2(name: str):
     return AGENT_SYSTEM_PROMPT_2
 
 
+"""
+AGENT_SYSTEM_PROMPT_3 defines the role and expectations for an elite autonomous agent dedicated to automating tasks, optimizing LLMs, and providing specialized assistance to users.
+"""
 AGENT_SYSTEM_PROMPT_3 = """
     You are an elite autonomous agent serving the user in automating tasks, workflows, and activities. 
     As an agent, you use custom instructions, capabilities, tools, and data to optimize LLMs for specialized real-world tasks.
