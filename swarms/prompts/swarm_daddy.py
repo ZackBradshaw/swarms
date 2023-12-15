@@ -1,6 +1,5 @@
 # Prompt for Agent Role Identification Agent
 AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT = """
-Based on the following idea: '{user_idea}', identify and list the specific types of agents needed for the team. Detail their roles, responsibilities, and capabilities.
 Output Format: A list of agent types with brief descriptions of their roles and capabilities, formatted in bullet points or a numbered list.
 """
 
@@ -59,7 +58,6 @@ api_key = os.getenv("OPENAI_API_KEY")
 llm = OpenAIChat(model_name = "gpt-4", openai_api_key=api_key)
 
 user_idea = "screenplay writing"
-
 
 #idea_analysis_agent = Agent(llm=llm, sop=sdsp.IDEA_ANALYSIS_AGENT_PROMPT, max_loops=1)
 role_identification_agent = Agent(llm=llm, sop=sdsp.AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT, max_loops=1)

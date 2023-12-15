@@ -1,2 +1,4 @@
-Created a temporary directory at /tmp/tmpy1_589mf
-Writing /tmp/tmpy1_589mf/_remote_module_non_scriptable.py
+Traceback (most recent call last):
+  File "/home/zack/code/swarms/playground/demos/swarm_daddy/swarm_daddy.py", line 5, in <module>
+    import swarms.prompts.swarm_daddy as sdsp
+ModuleNotFoundError: No module named 'swarms.prompts.swarm_daddy'

@@ -5,6 +5,8 @@ from swarms.prompts.growth_agent_prompt import GROWTH_AGENT_PROMPT
 from swarms.prompts.legal_agent_prompt import LEGAL_AGENT_PROMPT
 from swarms.prompts.operations_agent_prompt import OPERATIONS_AGENT_PROMPT
 from swarms.prompts.product_agent_prompt import PRODUCT_AGENT_PROMPT
+from swarms.prompts.swarm_daddy import AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT, AGENT_CONFIGURATION_AGENT_PROMPT, SWARM_ASSEMBLY_AGENT_PROMPT, TESTING_OPTIMIZATION_AGENT_PROMPT
+
 
 
 __all__ = [
@@ -14,4 +16,8 @@ __all__ = [
     "LEGAL_AGENT_PROMPT",
     "OPERATIONS_AGENT_PROMPT",
     "PRODUCT_AGENT_PROMPT",
+    "AGENT_ROLE_IDENTIFICATION_AGENT_PROMPT",
+    "AGENT_CONFIGURATION_AGENT_PROMPT",
+    "SWARM_ASSEMBLY_AGENT_PROMPT",
+    "TESTING_OPTIMIZATION_AGENT_PROMPT"
 ]
