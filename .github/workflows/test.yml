@@ -43,9 +43,9 @@ env:
           if [ "${{ matrix.test_type }}" == "core" ]; then
             poetry run pytest
           else
-            make extended_tests
+            poetry run pytest-extended
           fi
-        shell: bash
+        
     name: Python ${{ matrix.python-version }} ${{ matrix.test_type }}
     steps:
       - uses: actions/checkout@v4
@@ -66,11 +66,11 @@ env:
       - name: Run ${{matrix.test_type}} tests
         run: |
           if [ "${{ matrix.test_type }}" == "core" ]; then
-            make test
+            poetry run pytest
           else
-            poetry run pytest-extended
+            make extended_tests
           fi
-        shell: bash
+        
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -103,7 +103,7 @@ env:
       - name: Run ${{matrix.test_type}} tests
         run: |
           if [ "${{ matrix.test_type }}" == "core" ]; then
-            make test
+            poetry run pytest
           else
             make extended_tests
           fi
