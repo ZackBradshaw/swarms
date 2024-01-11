@@ -32,7 +32,8 @@ class AbstractAgent:
         """Get the name of the agent."""
         return self._name
 
-    def tools(self, tools):
+    def reset(self):
+        """(Abstract method) Reset the agent."""
         """init tools"""
 
     def memory(self, memory_store):
@@ -48,7 +49,7 @@ class AbstractAgent:
     def _arun(self, taks: str):
         """Run Async run"""
 
-    def chat(self, messages: List[Dict]):
+    def chat(self, messages):
         """Chat with the agent"""
 
     def _achat(self, messages: List[Dict]):
@@ -59,3 +60,5 @@ class AbstractAgent:
 
     def _astep(self, message: str):
         """Asynchronous step"""
+    def run(self, task):
+        """Run the agent once"""
