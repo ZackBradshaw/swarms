@@ -1,4 +1,10 @@
 Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.
+
+## General rules
+1. Follow standard conventions.
+2. Keep it simple stupid. Simpler is always better. Reduce complexity as much as possible.
+3. Boy scout rule. Leave the campground cleaner than you found it.
+4. Always find root cause. Always look for the root cause of a problem.
 _____________________________________
 
 ## General rules
@@ -237,6 +243,6 @@ Here are some general principles for writing highly usable, functional, reliable
 
     Documentation might be kept in a `docs` directory, with separate files for different topics.
 
-11. **Continuous Integration/Continuous Deployment (CI/CD):** This is typically handled by a system like Jenkins, GitHub Actions, or GitLab CI/CD. It involves creating a script or configuration file that tells the CI/CD system how to build, test, and deploy your code. For example, a `.github/workflows/main.yml` file for a GitHub Actions workflow.
+11. **Continuous Integration/Continuous Deployment (CI/CD):** Implement CI/CD pipelines for automatic testing and deployment. This ensures that any new changes do not break existing functionality and that the latest version of the application is always available for deployment.
 
 Remember, consistency in your naming conventions and organization is key. Having a standard and sticking to it will make your codebase easier to navigate and understand.
