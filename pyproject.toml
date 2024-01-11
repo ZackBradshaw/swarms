@@ -74,6 +74,7 @@ types-redis = "^4.3.21.6"
 types-pytz = "^2023.3.0.0"
 black = "^23.1.0"
 types-chardet = "^5.0.4.6"
+mypy = "^0.910"
 mypy-protobuf = "^3.0.0"
 
 
@@ -88,7 +89,7 @@ aggressive = 3
 line-length = 70
 
 [tool.black]
-line-length = 70
+line-length = 90
 target-version = ['py38']
 preview = true
 
