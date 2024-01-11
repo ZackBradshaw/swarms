@@ -33,7 +33,8 @@ class AbstractAgent:
         return self._name
 
     def tools(self, tools):
-        """init tools"""
+        """Initialize the tools for the agent."""
+        # TODO: Implement the logic to initialize the tools
 
     def memory(self, memory_store):
         """init memory"""
