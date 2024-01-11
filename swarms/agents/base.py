@@ -41,6 +41,8 @@ class AbstractAgent:
         pass
 
     def reset(self):
+        """Reset the agent."""
+        # TODO: Implement the logic to reset the agent
         """(Abstract method) Reset the agent."""
 
     def run(self, task: str):
