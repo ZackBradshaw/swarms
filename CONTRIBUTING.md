@@ -14,13 +14,13 @@ We welcome contributions to:
 4. Submit a request for a new feature.
 5. Improve our test coverage.
 
-### Contributing Features ✨
+<?xml version=\
 
 Swarms is designed to provide modular building blocks to build scalable swarms of autonomous agents!
 
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
-### Requirements:
+- New classes or functions should be added with documentation in docstrings and error handling.
 - New class and or function Module with documentation in docstrings with error handling
 - Tests using pytest in tests folder in the same module folder
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
