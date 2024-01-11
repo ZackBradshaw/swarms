@@ -41,7 +41,7 @@ env:
       - name: Run ${{matrix.test_type}} tests
         run: |
           if [ "${{ matrix.test_type }}" == "core" ]; then
-            make test
+            poetry run pytest
           else
             make extended_tests
           fi
@@ -68,7 +68,7 @@ env:
           if [ "${{ matrix.test_type }}" == "core" ]; then
             make test
           else
-            make extended_tests
+            poetry run pytest-extended
           fi
         shell: bash
   build:
