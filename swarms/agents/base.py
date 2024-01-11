@@ -45,8 +45,8 @@ class AbstractAgent:
         # TODO: Implement the logic to reset the agent
         """(Abstract method) Reset the agent."""
 
-    def run(self, task: str):
-        """Run the agent once"""
+    def run(self, task: str): # Add a parameter to the run method
+        """Run the agent once. Add a parameter to the method."""
 
     def _arun(self, taks: str):
         """Run Async run"""
