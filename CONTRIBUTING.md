@@ -123,7 +123,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 ## 🧪 tests
 - Run all the tests in the tests folder
-   ```pytest```
+   ```pytest .```
    
 ## Code Quality
 `code-quality.sh` runs 4 different code formatters for ultra reliable code cleanup using Autopep8, Black, Ruff, YAPF
