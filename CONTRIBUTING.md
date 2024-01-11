@@ -20,7 +20,7 @@ Swarms is designed to provide modular building blocks to build scalable swarms o
 
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
-- New classes or functions should be added with documentation in docstrings and error handling.
+- New functions and classes should be added with documentation in docstrings, unit tests, and examples.
 - New class and or function Module with documentation in docstrings with error handling
 - Tests using pytest in tests folder in the same module folder
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
@@ -85,7 +85,7 @@ To run the pre-commit tool, follow these steps:
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 
-### Docstrings
+### Docstrings, Unit Tests, and Examples
 
 All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
 
@@ -120,6 +120,8 @@ The `swarms` documentation is stored in a folder called `docs`. The project docu
 To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
 
 You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
+
+* Add a reminder to share a Google Colab for testing new features.
 
 ## 🧪 tests
 - Run all the tests in the tests folder
