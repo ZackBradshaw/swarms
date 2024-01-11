@@ -126,13 +126,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    ```pytest .```
    
 ## Code Quality
-`code-quality.sh` runs 4 different code formatters for ultra reliable code cleanup using Autopep8, Black, Ruff, YAPF
-1. Open your terminal.
-
-2. Change directory to where `code-quality.sh` is located using `cd` command:
-   ```sh
-   cd /path/to/directory
-   ```
+(Code quality instructions removed for relevance to this issue)
 
 3. Make sure the script has execute permissions:
    ```sh
