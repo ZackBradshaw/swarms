@@ -1,5 +1,17 @@
 # The Golden Metric: 95% User-Task-Completion-Satisfaction Rate
 
+## Measuring Software Quality based on Clean Code Principles
+When it comes to assessing the quality of software, adhering to clean code principles is fundamental. Clean code is readable, maintainable, and enhances understandability, making it easier for developers to work with it over time.
+
+Here are some guidelines for measuring the quality of software based on clean code principles:
+1. **Readability:** Code should be written in a clear and understandable manner, with meaningful variable and function names.
+2. **Maintainability:** Code should be designed for ease of maintenance, facilitating updates and enhancements without causing ripple effects.
+3. **Testability:** The codebase should be easily testable, allowing for comprehensive unit and integration testing.
+4. **Simplicity:** Keep it simple. Simplicity is key to reducing complexity and ensuring that code remains easy to understand and modify.
+5. **Consistency:** Follow consistent naming conventions and organization, promoting ease of navigation and comprehension.
+
+By following these principles, software can achieve a higher level of quality, making it more reliable, scalable, and efficient.
+
 In the world of Swarms, there’s one metric that stands above the rest: the User-Task-Completion-Satisfaction (UTCS) rate. This metric is the heart of our system, the pulse that keeps us moving forward. It’s not just a number; it’s a reflection of our commitment to our users and a measure of our success.
 
 ## What is the UTCS Rate?
