@@ -64,7 +64,7 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 ```
 
-- Check that it's installed
+- Now when you make a git commit, the black code formatter and ruff linter will run.
 
 ```bash
 pre-commit --version
@@ -151,3 +151,4 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 ## 📄 license
 
 By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
+- Refer to the newly created `code-quality.sh` script for code quality checks and improvements.
