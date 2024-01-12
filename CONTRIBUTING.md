@@ -21,7 +21,7 @@ Swarms is designed to provide modular building blocks to build scalable swarms o
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
 ### Requirements:
-- New class and or function Module with documentation in docstrings with error handling and parameter descriptions. Additionally, provide a Google Colab for testing the new feature.
+- New class and or function Module with documentation in docstrings with error handling and parameter descriptions. Additionally, provide a Google Colab with minimal code to test new features or reproduce the pull request. Ensure that the Google Colab is accessible without any issues.
 - Tests using pytest in tests folder in the same module folder
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
 
@@ -97,7 +97,7 @@ When creating new functions, please ensure you have the following:
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
-3. Examples in the documentation for the function.
+3. Examples in the documentation for the function and a Google Colab link for testing.
 
 
 
@@ -107,7 +107,7 @@ PRs do not need to pass all tests and linting requirements before they are merge
 
 ## 📝 documentation
 
-The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs`.
+The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs` and an entry should be added to autogenerate the documentation for the function.
 
 To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
 
