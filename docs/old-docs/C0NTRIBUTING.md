@@ -14,7 +14,7 @@ Join the Swarms community on Discord to connect with other contributors, coordin
 
 We have a growing list of tasks and issues that you can contribute to. To get started, follow these steps:
 
-1. Visit the [Swarms GitHub repository](https://github.com/kyegomez/swarms) and browse through the existing issues.
+1. Visit the [Swarms GitHub repository](https://github.com/kyegomez/ZackBradshaw/swarms) and browse through the existing issues.
 
 2. Find an issue that interests you and make a comment stating that you would like to work on it. Include a brief description of how you plan to solve the problem and any questions you may have.
 
@@ -32,9 +32,9 @@ To contribute your changes to Swarms, please follow these steps:
 
 2. Clone the forked repository to your local machine using the `git clone` command.
 
-3. Before making any changes, make sure to sync your forked repository with the original repository to keep it up to date. You can do this by following the instructions [here](https://docs.github.com/en/github/collaborating-with-pull-requests/syncing-a-fork).
+3. Before making any changes, make sure to sync your forked repository with the original repository to keep it up to date. You can do this by following the instructions [here](https://new-syncing-instructions-url).
 
-4. Create a new branch for your changes. This branch should have a descriptive name that reflects the task or issue you are working on.
+4. Create a new branch for your changes with a descriptive name that reflects the task or issue you are working on. This branch should have a descriptive name that reflects the task or issue you are working on.
 
 5. Make your changes in the branch, focusing on a small, focused change that only affects a few files.
 
@@ -42,7 +42,7 @@ To contribute your changes to Swarms, please follow these steps:
 
 7. Once your changes are ready, commit them to your branch with descriptive commit messages.
 
-8. Push the branch to your forked repository.
+8. Push the branch to your forked repository using the following command: git push -u origin your_branch_name
 
 9. Create a pull request (PR) from your branch to the main Swarms repository. Provide a clear and concise description of your changes in the PR.
 
