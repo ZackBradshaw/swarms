@@ -1,5 +1,21 @@
 # DistilWhisperModel Documentation
 
+## Troubleshooting GitHub Actions
+If you encounter GitHub Actions issues specific to DistilWhisperModel, follow this guide to troubleshoot and resolve common problems.
+
+### Analyzing Error Logs
+To diagnose GitHub Actions issues, carefully examine the error logs for error messages, warnings, or indicators of problems.
+
+### Identifying Common Issues
+Common issues may include incorrect workflow syntax, invalid interaction with external services, and authentication problems.
+
+### Proposing Solutions
+After identifying the root cause of the issue, propose appropriate solutions such as fixing workflow syntax, adjusting environment variables, or updating GitHub Actions configuration.
+
+For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions).
+
+For specific issues related to the DistilWhisperModel, see the [DistilWhisperModel Troubleshooting Guide](https://example.com/distil-whisper-model-troubleshooting).
+
 ## Overview
 
 The `DistilWhisperModel` is a Python class designed to handle English speech recognition tasks. It leverages the capabilities of the Whisper model, which is fine-tuned for speech-to-text processes. It is designed for both synchronous and asynchronous transcription of audio inputs, offering flexibility for real-time applications or batch processing.
@@ -117,7 +133,10 @@ The `DistilWhisperModel` offers a convenient interface to the powerful Whisper m
 ## Additional Notes
 
 - Ensure you have appropriate permissions to read audio files when using file paths.
+- If you encounter issues with DistilWhisperModel or GitHub Actions, join the [Swarms Community on Discord](https://discord.gg/qUtxnK2NMf) or reach out to the Swarms support team for personalized help.
 - Transcription quality depends on the audio quality and the Whisper model's performance on your dataset.
 - Adjust `chunk_duration` according to the processing power of your system for real-time transcription.
 
 For a full list of models supported by `transformers.AutoModelForSpeechSeq2Seq`, visit the [Hugging Face Model Hub](https://huggingface.co/models).
+
+If you need further assistance with DistilWhisperModel or GitHub Actions, join the [Swarms Community on Discord](https://discord.gg/qUtxnK2NMf) or reach out to the Swarms support team for personalized help.
