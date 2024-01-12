@@ -58,7 +58,7 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit by running the following command: `pip install pre-commit`
+- Install pre-commit by running the following command: `pip install pre-commit`. It will install the pre-commit tool.
 
 - Check the pre-commit version by running the following command: `pre-commit --version`
 
