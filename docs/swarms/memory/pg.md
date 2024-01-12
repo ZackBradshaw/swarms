@@ -326,6 +326,37 @@ def query(
 
     Returns:
     - list[BaseVectorStore.QueryResult]: A list of query results, each containing vector ID, vector (if included), score, and metadata.
+
+#### Example: Querying Vectors
+
+```python
+# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
+
+# Perform a vector query
+query_string = "your-query-string"
+count = 10  # Maximum number of results to return
+namespace = "your-namespace"
+include_vectors = False  # Set to True to include vectors in results
+distance_metric = "cosine_distance"
+
+results = vector_store.query(
+    query=query_string,
+    count=count,
+    namespace=namespace,
+    include_vectors=include_vectors,
+    distance_metric=distance_metric
+)
+
+# Process the query results
+for result in results:
+    vector_id = result.id
+    vector = result.vector
+    score = result.score
+    meta = result.meta
+
+# Handle the results as needed
+```
     """
 ```
 
