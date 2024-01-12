@@ -24,18 +24,15 @@ jobs:
           VARIABLE2: value2
         run: |
           # Add commands to build and test, code quality checks here
-          - name: Pre-commit checks
-            run: pre-commit run --all-files
-          - name: Code formatting
-            run: code_formatter
+          - name: Run tests
+            run: pytest
           - name: Linter
             run: linter
 
           # Add commands to build and test here
 
       - name: Run tests
-        run: |
-          # Add commands to run tests here
+        run: pytest
 
       - name: Build and deploy
         run: |
