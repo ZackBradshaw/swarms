@@ -61,7 +61,7 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 - Install pre-commit (https://pre-commit.com/)
 
 ```bash
-poetry install dev
+poetry install dev  # Install necessary dependencies before running pre-commit
 ```
 
 - Check that it's installed
@@ -72,7 +72,7 @@ pre-commit --version
 
 Now when you make a git commit, the black code formatter, ruff linter, and pre-commit checks will run.
 
-Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
+Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards. You can also install pre-commit as a git hook to automatically run checks with each commit, ensuring code consistency and quality.
 
 To troubleshoot and fix issues encountered during the pre-commit run, follow these steps:
 
@@ -84,7 +84,7 @@ To run the pre-commit tool, follow these steps:
 
 3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
 
-4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
+4. You can also install pre-commit as a git hook by running the command `pre-commit install`. This will automatically run pre-commit checks every time you commit changes, ensuring that your code remains consistent and error-free.
 
 
 ### Pre-commit Troubleshooting
