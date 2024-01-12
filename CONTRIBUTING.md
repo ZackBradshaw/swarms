@@ -72,11 +72,11 @@ Furthermore, the pre-commit checks will be automatically enforced with every pul
 
 To run the pre-commit tool, follow these steps:
 
-1. Install pre-commit by running the following command: `poetry install dev`. It will not only install pre-commit but also install all the deps and dev-deps of project
+1. Make sure that pre-commit is installed by running the command: `pre-commit --version`. If it's not installed, you can install it using `poetry install dev` from the project's root directory. This command will not only install pre-commit but also all the dependencies and dev-dependencies of the project.
 
-2. Once pre-commit is installed, navigate to the project's root directory.
+2. Once pre-commit is installed, navigate to the project's root directory by using `cd` command.
 
-3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+3. Run the command `pre-commit run --all-files` from the project's root directory. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the `pre-commit run --all-files` command until all issues are resolved. If you encounter any issues, refer to the message provided by the pre-commit tool which will contain instructions on how to resolve them.
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
