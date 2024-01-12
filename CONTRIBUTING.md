@@ -135,7 +135,6 @@ To view the documentation, install the project requirements with `poetry install
 Learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/) for additional information and documentation.
 
 ## 🧪 tests
-- Run all the tests in the tests folder
    ```pytest .```
    
 ## Code Quality
