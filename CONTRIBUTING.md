@@ -128,11 +128,11 @@ PRs must pass all tests and linting requirements before they can be merged.
 
 ## 📝 documentation
 
-The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs`.
+The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs` to produce beautiful documentation for the project.
 
-To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
+To view the documentation, install the project requirements with `poetry install dev`, and then run `mkdocs serve` to start the documentation server.
 
-You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
+Learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/) for additional information and documentation.
 
 ## 🧪 tests
 - Run all the tests in the tests folder
