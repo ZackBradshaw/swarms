@@ -97,7 +97,7 @@ def setup(
     install_vector_extension: bool = True,
 ) -> None:
     """
-    Provides a mechanism to initialize the database schema and extensions.
+    Provides a mechanism to initialize the database schema, extensions, and enforce pre-commit checks.
 
     Parameters:
     - create_schema (bool): If True, creates the necessary database schema for vector storage. Default: True.
@@ -114,6 +114,10 @@ vector_store = PgVectorVectorStore(connection_string="your-db-connection-string"
 
 # Set up the database with default settings
 vector_store.setup()
+    # Add the following line to enforce pre-commit checks
+    !pre-commit run --all-files
+    # Add the following line to enforce code-quality checks
+    !./code-quality.sh
 ```
 
 #### Example 2: Customized Database Setup

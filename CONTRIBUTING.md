@@ -58,13 +58,15 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit by running the following command: `pip install pre-commit`
+- Install pre-commit by running the following command: `poetry install dev`. It will not only install pre-commit but also install all the deps and dev-deps of the project
+- Once pre-commit is installed, navigate to the project's root directory.
+- Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the `pre-commit run --all-files` command until all issues are resolved.
 
-- Check the pre-commit version by running the following command: `pre-commit --version`
-
-Now when you make a git commit, the black code formatter and ruff linter will run.
-
-Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
+Please add the following step to your GitHub Actions workflow file to ensure that pre-commit checks are enforced:
+```yaml
+- name: Pre-commit
+  run: pre-commit run --all-files
+```
 
 To run the pre-commit tool, follow these steps:
 
@@ -72,7 +74,7 @@ To run the pre-commit tool, follow these steps:
 
 2. Once pre-commit is installed, navigate to the project's root directory.
 
-3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the `pre-commit run --all-files` command until all issues are resolved.
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
@@ -114,6 +116,10 @@ To run the documentation, install the project requirements with `poetry install 
 You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
 
 ## 🧪 tests
+
+- Add a step in the GitHub Actions workflow to run `pre-commit run --all-files` before the tests are executed. This will ensure that pre-commit checks are enforced as part of the GitHub Actions workflow.
+
+## Code Quality
 - Run all the tests in the tests folder
    ```pytest .```
    
@@ -122,7 +128,15 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 3. Make sure the script has execute permissions:
    ```sh
+   3. Make sure the script has execute permissions:
+   ```sh
    chmod +x code_quality.sh
+   ```
+
+4. Run the code-quality.sh script: 
+   ```sh
+   ./code-quality.sh
+   ```
    ```
 
 4. Run the script:
