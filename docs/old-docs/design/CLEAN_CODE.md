@@ -105,12 +105,12 @@ _____________________________________
 5. Repeatable.
 
 ## Code smells
-1. Rigidity. The software is difficult to change. A small change causes a cascade of subsequent changes.
-2. Fragility. The software breaks in many places due to a single change.
-3. Immobility. You cannot reuse parts of the code in other projects because of involved risks and high effort.
-4. Needless Complexity.
-5. Needless Repetition.
-6. Opacity. The code is hard to understand.
+1. Rigidity:\ The software is difficult to change. A small change causes a cascade of subsequent changes.
+2. Fragility:\ The software breaks in many places due to a single change.
+3. Immobility:\ You cannot reuse parts of the code in other projects because of involved risks and high effort.
+4. Needless Complexity\:
+5. Needless Repetition\:
+6. Opacity\: The code is hard to understand.
 
 
 
