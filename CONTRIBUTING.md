@@ -109,12 +109,18 @@ On the next page, review your changes then click "Create pull request":
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
 When creating new functions, please ensure you have the following:
+5. Include a Google Colab with minimal code to test new features or reproduce PR whenever possible.
+1. Write clear and concise docstrings for the function and its parameters.
+2. Emphasize the need for unit tests to ensure the function behaves as expected.
+3. Specify examples in the documentation to demonstrate the usage of the function.
+4. Create an entry in our docs to autogenerate the documentation for the function.
+5. Include a Google Colab with minimal code to test new features or reproduce PR whenever possible.
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
 3. Examples in the documentation for the function.
 4. Created an entry in our docs to autogenerate the documentation for the function.
-5. Please share a Google Colab with minimal code to test new feature or reproduce PR whenever it is possible. Please ensure that Google Colab can be accessed without any issue.
+5. Include a Google Colab with minimal code to test new features or reproduce PR whenever possible.
 
 All pull requests will be reviewed by the maintainers of the project. We will provide feedback and ask for changes if necessary.
 
