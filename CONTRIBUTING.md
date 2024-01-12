@@ -21,12 +21,7 @@ Swarms is designed to provide modular building blocks to build scalable swarms o
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
 ### Requirements:
-- New class and or function Module with documentation in docstrings with error handling, including descriptions for the function and all parameters, as well as unit tests and examples in the documentation
-- Tests using pytest in tests folder in the same module folder
-- Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
-
-
-## How to Contribute Changes
+- New class and or function Module with documentation in docstrings with error handling, including descriptions for the function and all parameters, as well as unit tests and examples in the documentation, as well as updating the documentation within docs/swarms/module_name folder and adding it to the mkdocs.yml
 
 First, fork this repository to your own GitHub account. Click "fork" in the top corner of the `swarms` repository to get started:
 
