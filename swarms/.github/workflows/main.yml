@@ -10,10 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up environment variables
+        run: |
+          export VARIABLE1=value1
+          export VARIABLE2=value2
+        working-directory: ${{ github.workspace }}
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Build and Test
+        env:
+          VARIABLE1: value1
+          VARIABLE2: value2
         run: |
           # Add commands to build and test here
 
