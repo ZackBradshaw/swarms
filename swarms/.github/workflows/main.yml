@@ -23,6 +23,14 @@ jobs:
           VARIABLE1: value1
           VARIABLE2: value2
         run: |
+          # Add commands to build and test, code quality checks here
+          - name: Pre-commit checks
+            run: pre-commit run --all-files
+          - name: Code formatting
+            run: code_formatter
+          - name: Linter
+            run: linter
+
           # Add commands to build and test here
 
       - name: Run tests
