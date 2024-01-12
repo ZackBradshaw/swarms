@@ -19,7 +19,7 @@ To continuously improve Swarms, we prioritize the following design objectives:
 
 Our goal is to continuously improve Swarms by following this roadmap while also being adaptable to new needs and opportunities as they arise.
 
-## Join the Swarms Community
+## Join the Swarms Community and troubleshoot GitHub Actions issues before taking on tasks.
 
 ## Troubleshooting GitHub Actions
 If you encounter issues with GitHub Actions, follow these troubleshooting steps to identify and fix common problems.
@@ -31,7 +31,7 @@ Examine the GitHub Actions error logs to identify potential issues. Look for err
 - Common issues may include incorrect workflow syntax, invalid interaction with external services, authentication problems, and GitHub Actions configuration issues. Additionally, carefully analyze the error logs, identify common issues, and propose solutions based on the nature of the problem.
 Common issues with GitHub Actions include incorrect workflow syntax, invalid interaction with external services, and authentication problems. By understanding these common issues, you can more easily diagnose the root cause of problems.
 
-### Proposing Solutions
+Before taking on tasks, check for and troubleshoot GitHub Actions issues. Analyze error logs to identify potential issues, including common problems such as incorrect workflow syntax, invalid interaction with external services, authentication problems, and GitHub Actions configuration issues. Additionally, carefully analyze the error logs, identify common issues, and propose solutions based on the nature of the problem. After identifying the issue, propose potential solutions such as fixing workflow syntax, adjusting environment variables, updating GitHub Actions configuration, and referencing the [GitHub Actions Documentation](https://docs.github.com/en/actions) for detailed troubleshooting guidance.
 After identifying the issue, propose potential solutions based on the nature of the problem. This may involve fixing workflow syntax, adjusting environment variables, or updating GitHub Actions configuration.
 
 For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions).
@@ -135,6 +135,6 @@ Swarms is brought to you by Agora, the open-source AI research organization. Joi
 
 - [Join the Agora Discord Server](https://discord.gg/qUtxnK2NMf)
 
-Thank you for your contributions and for being a part of the Swarms and Agora community! Together, we can advance Humanity through the power of AI.
+Thank you for your contributions and for being a part of the Swarms and Agora community! Before submitting work, check for and troubleshoot GitHub Actions issues to ensure the quality of your contributions. Additionally, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions/troubleshooting) for detailed guidance on troubleshooting GitHub Actions.
 
 For further assistance with GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions/troubleshooting)
