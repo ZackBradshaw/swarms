@@ -154,7 +154,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    chmod +x code_quality.sh
    ```
 
-4. Run the script:
+4. section removed:
    ```sh
    ./code-quality.sh
    ```
