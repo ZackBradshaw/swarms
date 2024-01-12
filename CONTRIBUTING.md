@@ -142,6 +142,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 If the script requires administrative privileges, you might need to run it with `sudo`:
 ```sh
 sudo ./code-quality.sh
+   echo 'Make sure the base branch is develop'
 ```
 
 Please replace `/path/to/directory` with the actual path where the `code-quality.sh` script is located on your system.
