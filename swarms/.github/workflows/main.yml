@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add your workflow steps here
+
+      - name: Run tests
+        run: |
+          # Add commands to run tests here
+
+      - name: Build and deploy
+        run: |
+          # Add commands to build and deploy here
