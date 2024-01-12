@@ -109,7 +109,7 @@ def setup(
 #### Example 1: Setting Up the Database
 
 ```python
-# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
 vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
 
 # Set up the database with default settings
