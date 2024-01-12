@@ -1,20 +1,20 @@
 # DistilWhisperModel Documentation
 
 ## Troubleshooting GitHub Actions
-If you encounter GitHub Actions issues specific to DistilWhisperModel, follow this guide to troubleshoot and resolve common problems.
+If you encounter GitHub Actions issues specific to DistilWhisperModel, follow this guide to troubleshoot and resolve common problems, as well as leveraging advanced troubleshooting steps.
 
 ### Analyzing Error Logs
-To diagnose GitHub Actions issues, carefully examine the error logs for error messages, warnings, or indicators of problems.
+For GitHub Actions troubleshooting, carefully examine the error logs for error messages, warnings, or indicators of problems, and analyze the workflow syntax, external service interactions, and authentication issues.
 
 ### Identifying Common Issues
-Common issues may include incorrect workflow syntax, invalid interaction with external services, and authentication problems.
+Common issues may include incorrect workflow syntax, invalid interaction with external services, authentication problems, and GitHub Actions configuration issues.
 
 ### Proposing Solutions
-After identifying the root cause of the issue, propose appropriate solutions such as fixing workflow syntax, adjusting environment variables, or updating GitHub Actions configuration.
+After identifying the root cause of the issue, propose appropriate solutions such as fixing workflow syntax, adjusting environment variables, updating GitHub Actions configuration, and referencing the [GitHub Actions documentation](https://docs.github.com/en/actions) for detailed troubleshooting guidance.
 
 For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions).
 
-For specific issues related to the DistilWhisperModel, see the [DistilWhisperModel Troubleshooting Guide](https://example.com/distil-whisper-model-troubleshooting).
+For specific issues related to the DistilWhisperModel, see the [DistilWhisperModel Troubleshooting Guide](https://valid-url.com/distil-whisper-model-troubleshooting).
 
 ## Overview
 
