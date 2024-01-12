@@ -87,7 +87,7 @@ To run the pre-commit tool, follow these steps:
 
 ### Docstrings, Unit Tests, and Examples
 
-All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
+All new functions and classes in `swarms` should include docstrings and type annotations. This is a prerequisite for any new functions and classes to be added to the library.
 
 `swarms` adheres to the [Google Python docstring style](https://new-url-to-code-quality-guide). Please refer to the style guide while writing docstrings for your contribution.
 
