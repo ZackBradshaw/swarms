@@ -2,7 +2,7 @@
 # this is a config file for the github action labeler
 
 # Add 'label1' to any changes within 'example' folder or any subfolders
-example_change:
+example_change: []
   - example/**
 
 # Add 'label2' to any file changes within 'example2' folder
