@@ -58,7 +58,7 @@ Please note that during the review process, you may be asked to make changes or 
 
 ## Developer Setup
 
-If you are interested in setting up the Swarms development environment, please follow the instructions provided in the [developer setup guide](docs/developer-setup.md). This guide provides an overview of the different tools and technologies used in the project.
+If you are interested in setting up the Swarms development environment, please follow the instructions provided in the [developer setup guide](new-url-to-developer-setup-guide.md). This guide provides an overview of the different tools and technologies used in the project.
 
 ## Optimization Priorities
 
