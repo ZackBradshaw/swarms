@@ -48,7 +48,7 @@ git commit -m "Your commit message"
 git push -u origin main
 ```
 
-## 🎨 Code quality
+## 🎨 Code quality instructions removed for relevance to this issue
 - Follow the following guide on code quality a python guide or your PR will most likely be overlooked: [CLICK HERE](https://google.github.io/styleguide/pyguide.html)
 
 
@@ -58,7 +58,10 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit (https://pre-commit.com/)
+- Install pre-commit (https://pre-commit.com/) by running the following command: `poetry run pre-commit install`.
+```bash
+poetry run pre-commit install
+```
 
 ```bash
 
@@ -80,16 +83,18 @@ To run the pre-commit tool, follow these steps:
 
 2. Once pre-commit is installed, navigate to the project's root directory.
 
-3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+3. Run the command `poetry run pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them.
+
+If any issues are found by the pre-commit tool, follow the provided feedback to make the necessary changes. Once the changes are made, re-run the `poetry run pre-commit run --all-files` command to reevaluate the code and ensure that all issues are resolved. Repeat this process until the pre-commit tool approves the changes.
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 
 ### Docstrings, Unit Tests, and Examples
 
-All new functions and classes in `swarms` should include docstrings for the function and all parameters as well as unit tests and examples. This is a prerequisite for any new functions and classes to be added to the library. Additionally, please share a Google Colab with minimal code to test new features or reproduce PR whenever it is possible. Please ensure that Google Colab can be accessed without any issue.
+All new functions and classes in `swarms` should include docstrings for the function and all parameters, unit tests, examples in the documentation, and an entry in the docs to autogenerate the documentation. This is a prerequisite for any new functions and classes to be added to the library. Additionally, please share a Google Colab with minimal code to test new features or reproduce PR whenever it is possible. Please ensure that Google Colab can be accessed without any issue.
 
-`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Additionally, please refer to the style guide while writing docstrings, and ensure that examples, unit tests, and Google Colab are included for your contribution.
+`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods) for all new functions and classes. Additionally, please refer to the style guide while writing docstrings, and ensure that examples, unit tests, and Google Colab are included for your contribution.
 
 ### Type checking
 
@@ -101,7 +106,7 @@ On the next page, review your changes then click "Create pull request":
 
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
-When creating new functions, please ensure you have the following:
+When creating new functions and classes, please ensure you have the following:
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
@@ -123,7 +128,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 ## 🧪 tests
 - Run all the tests in the tests folder
-   ```pytest .```
+   pytest .
    
 ## Code Quality
 (Code quality instructions removed for relevance to this issue)
