@@ -5,6 +5,9 @@ Thank you for your interest in contributing to Swarms!
 We are actively improving this library to reduce the amount of work you need to do to solve common computer vision problems.
 
 ## Contribution Guidelines
+6. Fixing a Failed GitHub Actions Run
+
+If the GitHub Actions run fails, follow these steps to diagnose and resolve the issue.
 
 We welcome contributions to:
 
@@ -27,6 +30,10 @@ Before you contribute a new feature, consider submitting an Issue to discuss the
 
 
 ## How to Contribute Changes
+
+### Fixing a Failed GitHub Actions Run
+
+If the GitHub Actions run fails, follow these steps to diagnose and resolve the issue.
 
 First, fork this repository to your own GitHub account. Click "fork" in the top corner of the `swarms` repository to get started:
 
@@ -115,6 +122,10 @@ PRs must pass all tests and linting requirements before they can be merged.
 
 ## 📝 documentation
 
+### Fixing a Failed GitHub Actions Run
+
+If the GitHub Actions run fails, follow these steps to diagnose and resolve the issue.
+
 The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs`.
 
 To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
@@ -148,6 +159,8 @@ Please replace `/path/to/directory` with the actual path where the `code-quality
 If you're asking for a specific content or functionality inside `code-quality.sh` related to YAPF or other code quality tools, you would need to edit the `code-quality.sh` script to include the desired commands, such as running YAPF on a directory. The contents of `code-quality.sh` would dictate exactly what happens when you run it.
 
 
-## 📄 license
+## 🛠️ Fixing a Failed GitHub Actions Run
+
+In case of a failed GitHub Actions run, follow these steps to analyze, debug, and resolve the issue.
 
 By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
