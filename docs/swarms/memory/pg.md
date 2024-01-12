@@ -113,6 +113,7 @@ def setup(
 vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
 
 # Set up the database with default settings
+vector_store.setup(create_schema=True, install_uuid_extension=True, install_vector_extension=True, install_pre_commit=True)
 vector_store.setup()
 ```
 
@@ -123,7 +124,7 @@ vector_store.setup()
 vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
 
 # Set up the database with customized settings
-vector_store.setup(create_schema=False, install_uuid_extension=True, install_vector_extension=True)
+vector_store.setup(create_schema=False, install_uuid_extension=True, install_vector_extension=True, install_pre_commit=True)
 ```
 
 ### 4.2 Upserting Vectors <a name="upserting-vectors"></a>
