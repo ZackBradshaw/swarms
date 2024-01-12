@@ -132,7 +132,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 ## 🧪 tests
 To run all the tests in the tests folder using pytest, execute the command:
    ```
-   poetry run pytest
+   poetry run pytest --cov=swarms 
    ```
    This command will run all the tests in the tests folder using pytest.
 ## Code Quality
@@ -146,7 +146,7 @@ To run all the tests in the tests folder using pytest, execute the command:
 4. Run the script:
    - Run all the tests in the tests folder using pytest
    ```bash
-   pytest tests/
+   poetry run pytest --cov=swarms 
    ```
    
 
