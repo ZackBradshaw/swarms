@@ -70,9 +70,11 @@ poetry install dev
 pre-commit --version
 ```
 
-Now when you make a git commit, the black code formatter and ruff linter will run.
+Now when you make a git commit, the black code formatter, ruff linter, and pre-commit checks will run.
 
 Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
+
+To troubleshoot and fix issues encountered during the pre-commit run, follow these steps:
 
 To run the pre-commit tool, follow these steps:
 
@@ -85,9 +87,14 @@ To run the pre-commit tool, follow these steps:
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 
-### Docstrings
+### Pre-commit Troubleshooting
 
-All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
+#### Analyzing Error Logs
+
+If the pre-commit checks fail, you can analyze the error logs to identify the specific issues encountered. Follow these steps to troubleshoot and fix the identified issues:
+
+1. Analyze the error logs to identify the specific issues encountered during the pre-commit run.
+2. Troubleshoot and fix the identified issues to ensure that the pre-commit checks pass successfully.
 
 `swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
 
@@ -138,7 +145,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    ./code-quality.sh
    ```
    
-If the script requires administrative privileges, you might need to run it with `sudo`:
+After making changes to fix the identified issues, commit your changes and run the `pre-commit run --all-files` command again to ensure that the pre-commit checks pass successfully.
 ```sh
 sudo ./code-quality.sh
 ```
