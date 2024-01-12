@@ -1,4 +1,11 @@
 Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.
+
+## General guidelines
+1. Follow standard conventions.
+2. Keep it simple stupid. Simpler is always better. Reduce complexity as much as possible.
+3. Boy scout rule. Leave the campground cleaner than you found it.
+4. Always find root cause. Always look for the root cause of a problem.
+5. Emphasize readability, changeability, extensibility, and maintainability in the code quality standards and the Google Python style guide.
 _____________________________________
 
 ## General rules
