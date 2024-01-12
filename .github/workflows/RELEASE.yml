@@ -10,7 +10,7 @@ on:
       - 'pyproject.toml'
 
 env:
-  POETRY_VERSION: "1.4.2"
+  POETRY_VERSION: "latest"
 
 jobs:
   if_release:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install poetry
-        run: pipx install poetry==$POETRY_VERSION
+        run: pipx install poetry
       - name: Set up Python 3.9
         uses: actions/setup-python@v5
         with:
