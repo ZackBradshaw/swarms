@@ -148,7 +148,20 @@ def upsert_vector(
     - namespace (Optional[str]): An optional namespace for the vector.
     - meta (Optional[dict]): An optional metadata dictionary associated with the vector.
     - **kwargs: Additional keyword arguments.
+```
+# Define a vector and upsert it
+vector = [0.1, 0.2, 0.3, 0.4]
+vector_id = "unique-vector-id"
+namespace = "your-namespace"
+meta = {"key1": "value1", "key2": "value2"}
 
+vector_store.upsert_vector(
+    vector=vector,
+    vector_id=vector_id,
+    namespace=namespace,
+    meta=meta
+)
+```vector: List[float],  # The vector to upsert.
     Returns:
     - str: The ID of the upserted vector.
     """
