@@ -85,11 +85,11 @@ To run the pre-commit tool, follow these steps:
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 
-### Docstrings
+### Docstrings, Unit Tests, and Examples
 
-All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
+All new functions and classes in `swarms` should include docstrings for the function and all parameters as well as unit tests and examples. This is a prerequisite for any new functions and classes to be added to the library. Additionally, please share a Google Colab with minimal code to test new features or reproduce PR whenever it is possible. Please ensure that Google Colab can be accessed without any issue.
 
-`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
+`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Additionally, please refer to the style guide while writing docstrings, and ensure that examples, unit tests, and Google Colab are included for your contribution.
 
 ### Type checking
 
