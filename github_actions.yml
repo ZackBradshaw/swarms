@@ -10,7 +10,22 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: GitHub Actions
+
+env:
+  MY_SECRET: ${{ secrets.MY_SECRET }}
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout code
