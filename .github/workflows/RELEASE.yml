@@ -34,7 +34,7 @@ jobs:
         run: |
           echo version=$(poetry version --short) >> $GITHUB_OUTPUT
       - name: Create Release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v2
         with:
           artifacts: "dist/*"
           token: ${{ secrets.GITHUB_TOKEN }}
