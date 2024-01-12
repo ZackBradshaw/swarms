@@ -61,7 +61,7 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 - Install pre-commit (https://pre-commit.com/)
 
 ```bash
-
+poetry install dev
 ```
 
 - Check that it's installed
