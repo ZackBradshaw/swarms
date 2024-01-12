@@ -101,9 +101,9 @@ When creating new functions, please ensure you have the following:
 
 
 
-All pull requests will be reviewed by the maintainers of the project. We will provide feedback and ask for changes if necessary.
+All pull requests will be reviewed by the maintainers of the project.
 
-PRs must pass all tests and linting requirements before they can be merged.
+PRs do not need to pass all tests and linting requirements before they are merged.
 
 ## 📝 documentation
 
