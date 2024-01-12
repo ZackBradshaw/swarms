@@ -95,7 +95,7 @@ All new functions and classes in `swarms` should include docstrings. This is a p
 
 Then, go back to your fork of the `swarms` repository, click "Pull Requests", and click "New Pull Request".
 
-Make sure the `base` branch is `develop` before submitting your PR.
+Make sure the `base` branch is `main` before submitting your PR.
 
 On the next page, review your changes then click "Create pull request":
 
