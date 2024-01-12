@@ -252,7 +252,29 @@ def load_entries(
     Parameters:
     - namespace (Optional[str]): An optional namespace for filtering. Default: None.
 
+    Parameters:
+    - namespace (Optional[str]): An optional namespace for filtering. Default: None.
+
     Returns:
+    - list[BaseVectorStore.Entry]: A list of loaded vector entries.
+
+#### Example: Loading Multiple Entries
+
+```python
+# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
+
+# Load all vector entries in the specified namespace
+entries = vector_store.load_entries(namespace="your-namespace")
+
+# Process the loaded entries
+for entry in entries:
+    vector_id = entry.id
+    vector = entry.vector
+    meta = entry.meta
+
+    # Handle the loaded entries as needed
+```
     - list[BaseVectorStore.Entry]: A list of loaded vector entries.
     """
 ```
