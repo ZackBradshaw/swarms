@@ -1,4 +1,8 @@
-# Contributing to Swarms
+# Contributing to ZackBradshaw/swarms: Automating all digital activities with millions of autonomous AI Agents
+
+Thank you for your interest in contributing to ZackBradshaw/swarms! We welcome contributions from the community to help improve usability and readability. By contributing, you can be a part of creating a dynamic and interactive AI system.
+
+To get started, please follow the guidelines below.
 
 Thank you for your interest in contributing to Swarms! We welcome contributions from the community to help improve usability and readability. By contributing, you can be a part of creating a dynamic and interactive AI system.
 
