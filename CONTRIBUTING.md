@@ -106,7 +106,7 @@ Next, write a description for your pull request, and click "Create pull request"
 
 When creating new functions, please ensure you have the following:
 
-1. Docstrings for the function and all parameters.
+1. 1. Docstrings for the function and all parameters..
 2. Unit tests for the function.
 3. Examples in the documentation for the function.
 4. Created an entry in our docs to autogenerate the documentation for the function.
