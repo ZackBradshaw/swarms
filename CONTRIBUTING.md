@@ -133,17 +133,9 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    chmod +x code_quality.sh
    ```
 
-4. Run the script:
-   ```sh
-   ./code-quality.sh
-   ```
-   
-If the script requires administrative privileges, you might need to run it with `sudo`:
-```sh
-sudo ./code-quality.sh
-```
 
-Please replace `/path/to/directory` with the actual path where the `code-quality.sh` script is located on your system.
+   
+
 
 If you're asking for a specific content or functionality inside `code-quality.sh` related to YAPF or other code quality tools, you would need to edit the `code-quality.sh` script to include the desired commands, such as running YAPF on a directory. The contents of `code-quality.sh` would dictate exactly what happens when you run it.
 
