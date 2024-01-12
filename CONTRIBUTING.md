@@ -127,7 +127,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 4. Run the script:
    ```sh
-   ./code-quality.sh
+   
    ```
    
 If the script requires administrative privileges, you might need to run it with `sudo`:
