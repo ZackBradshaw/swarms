@@ -24,7 +24,7 @@ Swarms is designed to provide modular building blocks to build scalable swarms o
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
 ### Requirements:
-- New class and or function Module with documentation in docstrings with error handling
+- New class and or function Module with documentation in docstrings with error handling, including unit tests and examples in the documentation.
 - Tests using pytest in tests folder in the same module folder
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
 
@@ -114,6 +114,10 @@ On the next page, review your changes then click "Create pull request":
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
 When creating new functions, please ensure you have the following:
+    - Unit tests for the function.
+    - Examples in the documentation for the function.
+    - Created an entry in our docs to autogenerate the documentation for the function.
+    - Please share a Google Colab with minimal code to test the new feature or reproduce PR whenever it is possible.
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
