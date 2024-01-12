@@ -90,7 +90,7 @@ To run the pre-commit tool, follow these steps:
 
 ### Docstrings, Unit Tests, and Examples
 
-All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
+All new functions and classes in `swarms` should include docstrings adhering to the [Google Python docstring style](https://google.github.io/styleguide/pyguide.html). This is a prerequisite for any new functions and classes to be added to the library.
 
 `swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
 
