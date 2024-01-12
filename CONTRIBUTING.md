@@ -158,7 +158,10 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 ## 🧪 tests
 - Run all the tests in the tests folder
-   ```pytest tests/```
+   - Run all the tests in the tests folder
+   ```bash
+   pytest tests/
+   ```
    
 ## Code Quality
 (Code quality instructions removed for relevance to this issue)
