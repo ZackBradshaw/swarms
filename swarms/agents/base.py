@@ -26,6 +26,8 @@ class AbstractAgent:
         """
         # a dictionary of conversations, default value is list
         self._name = name
+        self._tools = tools
+        self._memory = memory
 
     @property
     def name(self):
