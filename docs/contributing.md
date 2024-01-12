@@ -21,6 +21,20 @@ Our goal is to continuously improve Swarms by following this roadmap while also 
 
 ## Join the Swarms Community
 
+## Troubleshooting GitHub Actions
+If you encounter issues with GitHub Actions, follow these troubleshooting steps to identify and fix common problems.
+
+### Analyzing Error Logs
+Examine the GitHub Actions error logs to identify potential issues. Look for error messages, warnings, or other indicators of problems.
+
+### Identifying Common Issues
+Common issues with GitHub Actions include incorrect workflow syntax, invalid interaction with external services, and authentication problems. By understanding these common issues, you can more easily diagnose the root cause of problems.
+
+### Proposing Solutions
+After identifying the issue, propose potential solutions based on the nature of the problem. This may involve fixing workflow syntax, adjusting environment variables, or updating GitHub Actions configuration.
+
+For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions).
+
 Join the Swarms community on Discord to connect with other contributors, coordinate work, and receive support.
 
 - [Join the Swarms Discord Server](https://discord.gg/qUtxnK2NMf)
@@ -121,3 +135,5 @@ Swarms is brought to you by Agora, the open-source AI research organization. Joi
 - [Join the Agora Discord Server](https://discord.gg/qUtxnK2NMf)
 
 Thank you for your contributions and for being a part of the Swarms and Agora community! Together, we can advance Humanity through the power of AI.
+
+For further assistance with GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions)
