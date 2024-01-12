@@ -76,6 +76,8 @@ To run the pre-commit tool, follow these steps:
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
+- Install pytest by running the following command: `pip install pytest`
+
 
 ### Docstrings
 
@@ -114,6 +116,8 @@ To run the documentation, install the project requirements with `poetry install 
 You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
 
 ## 🧪 tests
+- Install pytest by running the following command: `pip install pytest`
+
 - Run all the tests in the tests folder
    ```pytest```
    
