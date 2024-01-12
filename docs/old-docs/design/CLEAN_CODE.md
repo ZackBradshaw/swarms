@@ -1,4 +1,4 @@
-Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.
+Code is clean if it can be understood easily – by everyone on the team. Clean code can be understood easily by everyone on the team. It can be read and enhanced by other developers. With understandability comes understandability, readability, changeability, extensibility, and maintainability.
 
 ## General rules
 1. Follow standard conventions.
@@ -14,11 +14,11 @@ _____________________________________
 4. Always find root cause. Always look for the root cause of a problem.
 
 ## Design rules
-1. Keep configurable data at high levels.
+1. Keep configuration details at high levels for easy access and modification.
 2. Prefer polymorphism to if/else or switch/case.
-3. Separate multi-threading code.
-4. Prevent over-configurability.
-5. Use dependency injection.
+3. Isolate multi-threading code to prevent conflicts and enhance readability.
+4. Avoid excessive configurability to simplify management and reduce complexity.
+5. Utilize dependency injection for improved modular design and testability.
 6. Follow Law of Demeter. A class should know only its direct dependencies.
 
 ## Understandability tips
@@ -36,7 +36,7 @@ _____________________________________
 4. Use searchable names.
 5. Replace magic numbers with named constants.
 6. Avoid encodings. Don't append prefixes or type information.
-7. The Name of a variable, Function, or Class should answer  why it exists, what it does , and how it can used. Comments are a burden
+7. Variable, function, and class names should answer why they exist, what they do, and how they are used. Comments should be used sparingly.
 8. Clarity is King
 9. ClassNames should not be a verb
 10. Methods should have verb or verb phrase names
@@ -48,16 +48,16 @@ _____________________________________
 1. Small.
 2. Do one thing.
 3. Use descriptive names.
-4. Prefer fewer arguments.
+4. Minimize the number of function arguments for simplicity and clarity.
 5. Have no side effects.
 6. Don't use flag arguments. Split method into several independent methods that can be called from the client without the flag.
 7. Smaller than 20 lines long
-8. The Stepdown rule => function -> next level of abstraction
+8. Follow the Stepdown rule: function -> next level of abstraction for clear and organized code.
 
 
 ## ErrorHandling
 1. Specify where the error in print
-2. Don't use a single variable
+2. Avoid using a single variable for multiple purposes.
 3. 
 
 ## If statements
@@ -67,7 +67,7 @@ _____________________________________
 ## Comments rules
 1. Always try to explain yourself in code.
 2. Don't be redundant.
-3. Don't add obvious noise.
+3. Avoid adding redundant or obvious code, as it can clutter the codebase.
 4. Don't use closing brace comments.
 5. Don't comment out code. Just remove.
 6. Use as explanation of intent.
@@ -77,9 +77,9 @@ _____________________________________
 ## Source code structure
 1. Separate concepts vertically.
 2. Related code should appear vertically dense.
-3. Declare variables close to their usage.
-4. Dependent functions should be close.
-5. Similar functions should be close.
+3. Declare variables near the point of their usage for clear understanding and maintenance.
+4. Group dependent functions together to maintain context and improve readability.
+5. Place similar functions close to each other for easy reference and maintenance.
 6. Place functions in the downward direction.
 7. Keep lines short.
 8. Don't use horizontal alignment.
@@ -205,7 +205,7 @@ Here are some general principles for writing highly usable, functional, reliable
             return None
     ```
 
-6. **Performance:** Use built-in functions and data types for better performance.
+6. **Performance and Optimization:** Use built-in functions and data types for better performance.
 
     ```python
     # Using a set to check for membership is faster than using a list
