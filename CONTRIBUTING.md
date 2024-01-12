@@ -10,9 +10,9 @@ We welcome contributions to:
 
 1. Add a new feature to the library (guidance below).
 2. Improve our documentation and add examples to make it clear how to leverage the swarms library.
-3. Report bugs and issues in the project.
+3. Report bugs and issues and contribute to fixing bugs and issues and contribute to testing and providing examples in the project. Please report bugs and issues by submitting an Issue on the GitHub repository and provide unit tests and examples in the documentation.
 4. Submit a request for a new feature.
-5. Improve our test coverage.
+5. Improve our test coverage and contribute tests and examples. See the guidelines below for contributing tests.
 
 ### Contributing Features ✨
 
@@ -58,7 +58,22 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pytest by running the following command: `pip install pytest`
+- Install pytest by running the following command: `pre-commit install dev`
+- Check the pre-commit version by running the following command: `pre-commit --version`
+
+Now when you make a git commit, the black code formatter and ruff linter will run.
+
+Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
+
+To run the pre-commit tool, follow these steps:
+
+1. Install pre-commit by running the following command: `pre-commit install dev`. It will not only install pre-commit but also install all the deps and dev-deps of project
+
+2. Once pre-commit is installed, navigate to the project's root directory.
+
+3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+
+4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 - Check the pre-commit version by running the following command: `pre-commit --version`
 
@@ -81,7 +96,7 @@ To run the pre-commit tool, follow these steps:
 
 All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
 
-`swarms` adheres to the [Google Python docstring style](https://google.com/google/styleguide/blob/gh-pages/python_style_rules.md#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
+`swarms` adheres to the [Google Python docstring style guide](https://google.com/google/styleguide/blob/gh-pages/python_style_rules.md#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
 
 ### Type checking
 
@@ -97,7 +112,7 @@ When creating new functions, please ensure you have the following:
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
-3. Examples in the documentation for the function.
+3. Provide examples in the documentation for the function.
 
 
 
