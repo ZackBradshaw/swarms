@@ -53,13 +53,13 @@ Let's start by examining the class definition of `PgVectorVectorStore`, includin
 ```python
 class PgVectorVectorStore(BaseVectorStore):
     """
-    A vector store driver to Postgres using the PGVector extension.
+    A vector store driver for Postgres using the PGVector extension.
 
     Attributes:
-        connection_string: An optional string describing the target Postgres database instance.
-        create_engine_params: Additional configuration params passed when creating the database connection.
-        engine: An optional sqlalchemy Postgres engine to use.
-        table_name: Optionally specify the name of the table to used to store vectors.
+        connection_string (Optional[str]): An optional string describing the target Postgres database instance.
+        create_engine_params (dict): Additional configuration parameters passed when creating the database connection.
+        engine (Optional[Engine]): An optional SQLAlchemy Postgres engine to use.
+        table_name (str): Optionally specify the name of the table to be used to store vectors.
     ...
     """
 ```
@@ -78,7 +78,6 @@ The class includes validators for the `connection_string` and `engine` attribute
 ### 3.2 Initialization
 
 During initialization, the class checks if an engine is provided. If an engine is not provided, it creates a new database connection using the `connection_string` and `create_engine_params`.
-
 ---
 
 ## 4. Functionality and Usage <a name="functionality-and-usage"></a>
@@ -229,6 +228,15 @@ if loaded_entry is not None:
 else:
     # Vector not found
 ```
+# Load a specific vector entry
+loaded_entry = vector_store.load_entry(vector_id="unique-vector-id", namespace="your-namespace")
+
+if loaded_entry is not None:
+    loaded_vector = loaded_entry.vector
+    loaded_meta = loaded_entry.meta
+    # Use the loaded vector and metadata as needed
+else:
+    # Vector not found
 
 #### 4.3.2 Loading Multiple Entries
 
