@@ -14,6 +14,10 @@ We welcome contributions to:
 4. Submit a request for a new feature.
 5. Improve our test coverage.
 
+### Troubleshooting and Reporting Issues with GitHub Actions Runs
+
+When encountering failed GitHub Actions runs, follow the steps below to troubleshoot and report the issues.
+
 <?xml version=\
 
 Swarms is designed to provide modular building blocks to build scalable swarms of autonomous agents!
@@ -21,7 +25,11 @@ Swarms is designed to provide modular building blocks to build scalable swarms o
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
 - New functions and classes should be added with documentation in docstrings, unit tests, and examples.
-- New class and or function Module with documentation in docstrings with error handling
+- New class or function Module with documentation in docstrings with error handling
+
+#### Provide Error Logs and Description
+
+When reporting a failed GitHub Actions run, ensure to provide detailed error logs and a description of the issue. 
 - Tests using pytest in tests folder in the same module folder
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
 
