@@ -30,7 +30,7 @@ class AbstractWorker:
     def send(
         self,
         message: Union[Dict, str],
-        recipient,  # add AbstractWorker
+        recipient: "AbstractWorker",  # add AbstractWorker
         request_reply: Optional[bool] = None,
     ):
         """(Abstract method) Send a message to another worker."""
@@ -72,6 +72,13 @@ class AbstractWorker:
 
         Args:
             messages (list[dict]): a list of messages received.
+    async def a_send(
+        self,
+        message: Union[Dict, str],
+        recipient: "AbstractWorker",  # add AbstractWorker
+        request_reply: Optional[bool] = None,
+    ):
+        """(Aabstract async method) Send a message to another worker."""
             sender: sender of an Agent instance.
         Returns:
             str or dict or None: the generated reply. If None, no reply is generated.
