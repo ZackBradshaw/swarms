@@ -11,7 +11,7 @@ To continuously improve Swarms, we prioritize the following design objectives:
 
 1. **Usability**: Increase the ease of use and user-friendliness of the swarm system to facilitate adoption and interaction with basic input.
 
-2. **Reliability**: Improve the swarm's ability to obtain the desired output even with basic and un-detailed input.
+2. **Reliability**: Improve the swarm's ability to obtain the desired output even with basic and un-detailed input, ensuring that contribution guidelines are clear and accessible to new contributors.
 
 3. **Speed**: Reduce the time it takes for the swarm to accomplish tasks by improving the communication layer, critiquing, and self-alignment with meta prompting.
 
@@ -28,6 +28,7 @@ If you encounter issues with GitHub Actions, follow these troubleshooting steps 
 Examine the GitHub Actions error logs to identify potential issues. Look for error messages, warnings, or other indicators of problems.
 
 ### Identifying Common Issues
+- Common issues may include incorrect workflow syntax, invalid interaction with external services, authentication problems, and GitHub Actions configuration issues. Additionally, carefully analyze the error logs, identify common issues, and propose solutions based on the nature of the problem.
 Common issues with GitHub Actions include incorrect workflow syntax, invalid interaction with external services, and authentication problems. By understanding these common issues, you can more easily diagnose the root cause of problems.
 
 ### Proposing Solutions
@@ -37,7 +38,7 @@ For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Ac
 
 Join the Swarms community on Discord to connect with other contributors, coordinate work, and receive support.
 
-- [Join the Swarms Discord Server](https://discord.gg/qUtxnK2NMf)
+- [Join the Swarms Discord Server](https://new-valid-url.com/swarms-discord-server)
 
 
 ## Report and Issue
@@ -136,4 +137,4 @@ Swarms is brought to you by Agora, the open-source AI research organization. Joi
 
 Thank you for your contributions and for being a part of the Swarms and Agora community! Together, we can advance Humanity through the power of AI.
 
-For further assistance with GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions)
+For further assistance with GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions/troubleshooting)
