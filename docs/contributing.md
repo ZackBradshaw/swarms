@@ -7,6 +7,14 @@ To get started, please follow the guidelines below.
 
 ## Optimization Priorities
 
+To continuously improve ZackBradshaw/swarms, we prioritize the following design objectives:
+
+1. **Usability**: Increase the ease of use and user-friendliness of the swarm system to facilitate adoption and interaction with basic input.
+
+2. **Reliability**: Improve the swarm's ability to obtain the desired output even with basic and un-detailed input.
+3. **Speed**: Reduce the time it takes for the swarm to accomplish tasks by improving the communication layer, critiquing, and self-alignment with meta prompting.
+4. **Scalability**: Ensure that the system is asynchronous, concurrent, and self-healing to support scalability.
+
 To continuously improve Swarms, we prioritize the following design objectives:
 
 1. **Usability**: Increase the ease of use and user-friendliness of the swarm system to facilitate adoption and interaction with basic input.
