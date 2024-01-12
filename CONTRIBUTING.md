@@ -49,7 +49,7 @@ git push -u origin main
 ```
 
 ## 🎨 Code quality
-- Follow the following guide on code quality a python guide or your PR will most likely be overlooked: [CLICK HERE](https://google.github.io/styleguide/pyguide.html)
+- Follow the following guide on code quality a python guide or your PR will most likely be overlooked: [CLICK HERE](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods)
 
 
 
