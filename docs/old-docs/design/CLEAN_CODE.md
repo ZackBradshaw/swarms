@@ -137,7 +137,7 @@ Here are some general principles for writing highly usable, functional, reliable
 
 7. **Scalability:** The code should be designed to scale well as the size of the input data or the number of users increases. This includes using scalable algorithms and data structures, and designing the code to work well in a distributed or parallel computing environment if necessary.
 
-8. **Testing:** The code should include comprehensive tests to ensure that it works correctly. This includes unit tests for individual functions and classes, as well as integration tests to ensure that the different parts of the code work well together.
+8. **Testing:** The code should include comprehensive tests to ensure that it works correctly. Refer to the [Tests section](#G) for guidelines on writing tests. This includes unit tests for individual functions and classes, as well as integration tests to ensure that the different parts of the code work well together.
 
 9. **Version Control:** The code should be stored in a version control system like Git, which allows for tracking changes, collaborating with others, and rolling back to a previous state if necessary.
 
