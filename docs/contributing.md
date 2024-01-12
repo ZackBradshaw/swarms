@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to Swarms! We welcome contributions from the community to help improve usability and readability. By contributing, you can be a part of creating a dynamic and interactive AI system.
+Thank you for your interest in contributing to Swarms! We welcome contributions from the community to help improve usability and readability. [CLICK HERE](docs/CONTRIBUTING.md) By contributing, you can be a part of creating a dynamic and interactive AI system.
 
 To get started, please follow the guidelines below.
 
@@ -118,6 +118,6 @@ If you are interested in setting up the Swarms development environment, please f
 
 Swarms is brought to you by Agora, the open-source AI research organization. Join the Agora community to connect with other researchers and developers working on AI projects.
 
-- [Join the Agora Discord Server](https://discord.gg/qUtxnK2NMf)
+- [Join the Agora Discord Server](docs/CONTRIBUTING.md)
 
 Thank you for your contributions and for being a part of the Swarms and Agora community! Together, we can advance Humanity through the power of AI.
