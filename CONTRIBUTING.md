@@ -68,11 +68,12 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 ```bash
 pre-commit --version
+pre-commit install
 ```
 
 Now when you make a git commit, the black code formatter and ruff linter will run.
 
-Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
+Furthermore, the pre-commit checks will be automatically enforced with every pull request opened, streamlining the code review process and ensuring that all contributions adhere to our quality standards. Configure the pre-commit hooks in the relevant file `pre-commit-config.yaml`.
 
 To run the pre-commit tool, follow these steps:
 
