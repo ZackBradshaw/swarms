@@ -25,7 +25,7 @@ env:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: "snok/install-poetry@v1"
+        uses: "actions/setup-python@v2"
         with:
           python-version: ${{ matrix.python-version }}
           poetry-version: "1.4.2"
@@ -105,6 +105,6 @@ env:
           if [ "${{ matrix.test_type }}" == "core" ]; then
             poetry run pytest
           else
-            make extended_tests
+            poetry run pytest-extended
           fi
         shell: bash
