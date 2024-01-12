@@ -53,6 +53,7 @@ class AbstractAgent:
 
     def chat(self, messages: List[Dict]):
         """Chat with the agent"""
+        # TODO: Implement the logic to chat with other agents
 
     def _achat(self, messages: List[Dict]):
         """Asynchronous Chat"""
