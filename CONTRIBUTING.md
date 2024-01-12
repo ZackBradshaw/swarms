@@ -60,7 +60,7 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 - Install pre-commit by running the following command: `pip install pre-commit`. It will install the pre-commit tool.
 
-- Check the pre-commit version by running the following command: `pre-commit --version`. It will display the installed pre-commit version.
+- - Check the pre-commit version by running the following command: `pre-commit run --all-files`. It will display the installed pre-commit version.
 
 Now when you make a git commit, the black code formatter and ruff linter will run.
 
