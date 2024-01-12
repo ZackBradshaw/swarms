@@ -81,7 +81,7 @@ To run the pre-commit tool, follow these steps:
 
 All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
 
-`swarms` adheres to the [Google Python docstring style](https://google.com/google/styleguide/blob/gh-pages/python_style_rules.md#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
+`swarms` adheres to the [Google Python docstring style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Please refer to the style guide while writing docstrings for your contribution.
 
 ### Type checking
 
@@ -142,4 +142,4 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 
 ## 📄 license
 
-By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
+By contributing, you agree that your contributions will be licensed under an [MIT license](https://choosealicense.com/licenses/mit/).
