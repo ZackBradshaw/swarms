@@ -94,7 +94,7 @@ If any issues are found by the pre-commit tool, follow the provided feedback to 
 
 All new functions and classes in `swarms` should include docstrings for the function and all parameters as well as unit tests and examples. This is a prerequisite for any new functions and classes to be added to the library. Additionally, please share a Google Colab with minimal code to test new features or reproduce PR whenever it is possible. Please ensure that Google Colab can be accessed without any issue.
 
-`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Additionally, please refer to the style guide while writing docstrings, and ensure that examples, unit tests, and Google Colab are included for your contribution.
+`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods) for all new functions and classes. Additionally, please refer to the style guide while writing docstrings, and ensure that examples, unit tests, and Google Colab are included for your contribution.
 
 ### Type checking
 
@@ -106,7 +106,7 @@ On the next page, review your changes then click "Create pull request":
 
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
-When creating new functions, please ensure you have the following:
+When creating new functions and classes, please ensure you have the following:
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
