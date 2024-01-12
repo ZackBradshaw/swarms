@@ -5,6 +5,14 @@ Thank you for your interest in contributing to Swarms!
 We are actively improving this library to reduce the amount of work you need to do to solve common computer vision problems.
 
 ## Contribution Guidelines
+7. Addressing Failed GitHub Actions Runs
+
+If the GitHub Actions run fails, follow these guidelines to analyze error logs, identify the cause of the failure, and implement the necessary fixes.
+
+- Analyze the error logs to identify the specific error message.
+- Search the error logs to locate the source of the error and understand the cause.
+- Check for any relevant documentation or resources that may provide a solution to the error.
+- Implement the necessary fixes and run the GitHub Actions workflow again to verify the resolution.
 
 We welcome contributions to:
 
@@ -125,6 +133,11 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 ## 🧪 tests
 - Run all the tests in the tests folder
+   ```
+   # Analyze error logs to identify the specific error message
+   # Search the error logs to locate the source of the error and understand the cause
+   # Check for any relevant documentation or resources that may provide a solution to the error
+   # Implement the necessary fixes and run the GitHub Actions workflow again to verify the resolution
    ```pytest tests/```
    
 ## Code Quality
@@ -152,3 +165,11 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 
 By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
 - Refer to the `code-quality.sh` script for running code quality checks.
+
+### Analyzing Failed GitHub Actions Runs
+If the GitHub Actions run fails, it is essential to analyze the error logs to identify the cause of the failure and implement the necessary fixes. Consider the following steps:
+
+1. Analyze the error logs to identify the specific error message.
+2. Search the error logs to locate the source of the error and understand the cause.
+3. Check for any relevant documentation or resources that may provide a solution to the error.
+4. Implement the necessary fixes and run the GitHub Actions workflow again to verify the resolution.
