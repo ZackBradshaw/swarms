@@ -31,7 +31,7 @@ Our goal is to continuously improve Swarms by following this roadmap while also 
 
 Join the Swarms community on Discord to connect with other contributors, coordinate work, and receive support.
 
-- [Join the Swarms Discord Server](https://discord.gg/qUtxnK2NMf)
+- [Join the Swarms Discord Server](https://discord.gg/correct-url)
 
 
 ## Report and Issue
