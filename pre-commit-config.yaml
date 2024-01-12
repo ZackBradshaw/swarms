@@ -1,0 +1,14 @@
+repos:
+- repo: https://github.com/psf/black
+  rev: stable
+  hooks:
+    - id: black
+      language_version: python3.9
+      files: \.py$
+      exclude: ^vendor/
+- repo: https://github.com/cyanogilvie/Flake8Lint
+  rev: v0.1.0
+  hooks:
+    - id: flake8
+      files: \.py$
+      exclude: ^vendor/
