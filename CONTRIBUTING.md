@@ -48,7 +48,7 @@ git commit -m "Your commit message"
 git push -u origin main
 ```
 
-## 🎨 Code quality
+## 🎨 Code quality instructions removed for relevance to this issue
 - Follow the following guide on code quality a python guide or your PR will most likely be overlooked: [CLICK HERE](https://google.github.io/styleguide/pyguide.html)
 
 
