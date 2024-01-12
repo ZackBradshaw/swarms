@@ -23,6 +23,8 @@ Before you contribute a new feature, consider submitting an Issue to discuss the
 ### Requirements:
 - New class and or function Module with documentation in docstrings with error handling and parameter descriptions. Additionally, provide a Google Colab for testing the new feature.
 - Tests using pytest in tests folder in the same module folder
+- Share a Google Colab with minimal code to test the new feature or reproduce the pull request
+- Create an entry in the documentation for the new function
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
 
 
@@ -94,6 +96,9 @@ On the next page, review your changes then click "Create pull request":
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
 When creating new functions, please ensure you have the following:
+1. Docstrings for the function and all parameters.
+2. Unit tests for the function.
+3. Examples in the documentation for the function.
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
