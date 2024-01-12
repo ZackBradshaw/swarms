@@ -128,7 +128,10 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 ## 🧪 tests
 - Run all the tests in the tests folder
-   ```pytest tests/```
+   - Run all the tests in the tests folder
+   ```bash
+   pytest tests/
+   ```
    
 ## Code Quality
 (Code quality instructions removed for relevance to this issue)
@@ -139,8 +142,9 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    ```
 
 4. Run the script:
-   ```sh
-   ./code-quality.sh
+   - Run all the tests in the tests folder using pytest
+   ```bash
+   pytest tests/
    ```
    
 
