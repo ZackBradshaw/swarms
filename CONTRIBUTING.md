@@ -109,7 +109,7 @@ PRs must pass all tests, including the pre-commit checks and linting requirement
 
 The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs` and an entry should be added to autogenerate the documentation for the function.
 
-To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
+To run the documentation, install the project requirements with `pip install -r requirements.txt`. Then, run `mkdocs serve` to start the documentation server. For more information about mkdocs, visit the [official website](https://www.mkdocs.org/).
 
 You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
 
