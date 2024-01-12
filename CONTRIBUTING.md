@@ -71,7 +71,7 @@ pre-commit --version
 pre-commit install
 ```
 
-Now when you make a git commit, the black code formatter and ruff linter will run. Be sure to follow the Google Python style guide for code quality. Make sure the base branch is develop.
+Now when you make a git commit, the black code formatter and ruff linter will run on every git commit. Be sure to follow the Google Python style guide for code quality. Make sure the base branch is develop.
 
 Furthermore, the pre-commit checks will be automatically enforced with every pull request opened, streamlining the code review process and ensuring that all contributions adhere to our quality standards. Configure the pre-commit hooks in the relevant file `pre-commit-config.yaml`.
 
