@@ -1,19 +1,7 @@
 # DistilWhisperModel Documentation
 
-## Troubleshooting GitHub Actions
-If you encounter GitHub Actions issues specific to DistilWhisperModel, follow this guide to troubleshoot and resolve common problems.
-
-### Analyzing Error Logs
-To diagnose GitHub Actions issues, carefully examine the error logs for error messages, warnings, or indicators of problems.
-
-### Identifying Common Issues
-Common issues may include incorrect workflow syntax, invalid interaction with external services, and authentication problems.
-
-### Proposing Solutions
-After identifying the root cause of the issue, propose appropriate solutions such as fixing workflow syntax, adjusting environment variables, or updating GitHub Actions configuration.
-
-For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions).
-
+If you encounter issues with GitHub Actions, refer to the [Troubleshooting GitHub Actions](troubleshooting_gha.md) guide for troubleshooting steps and solutions.
+For specific issues related to the DistilWhisperModel, see the [DistilWhisperModel Troubleshooting Guide](https://example.com/distil-whisper-model-troubleshooting).
 For specific issues related to the DistilWhisperModel, see the [DistilWhisperModel Troubleshooting Guide](https://example.com/distil-whisper-model-troubleshooting).
 
 ## Overview
