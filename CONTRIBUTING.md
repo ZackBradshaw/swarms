@@ -28,9 +28,9 @@ Before you contribute a new feature, consider submitting an Issue to discuss the
 
 ## How to Contribute Changes
 
-First, fork this repository to your own GitHub account. Click "fork" in the top corner of the `swarms` repository to get started:
+First, fork this repository to your own GitHub account. Click "fork" in the top corner of the `ZackBradshaw/swarms` repository to get started:
 
-Then, run `git clone` to download the project code to your computer.
+Then, run `git clone https://github.com/your-username/ZackBradshaw/swarms.git` to download the project code to your computer.
 
 Move to a new branch using the `git checkout` command:
 
@@ -45,7 +45,7 @@ Make any changes you want to the project code, then run the following commands t
 ```bash
 git add .
 git commit -m "Your commit message"
-git push -u origin main
+git push -u origin your_branch_name
 ```
 
 ## 🎨 Code quality
