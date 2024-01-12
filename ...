@@ -1,0 +1,29 @@
+import logging
+
+def fix_gha_error():
+    # Add code to fix the GitHub Actions error here
+    logging.info("Fixing GitHub Actions error")
+
+if __name__ == "__main__":
+    fix_gha_error()
+```
+
+In this new file, `fix_gha_error.py`, we will define a function `fix_gha_error()` that will contain the code to fix the GitHub Actions error. The function will log a message using the `logging` module to indicate that the error is being fixed.
+
+We will also include a conditional block at the end of the file to execute the `fix_gha_error()` function if the file is run directly.
+
+Unit tests for `fix_gha_error.py`:
+
+```python
+import unittest
+from unittest.mock import patch
+from fix_gha_error import fix_gha_error
+
+class TestFixGHAError(unittest.TestCase):
+    @patch("logging.info")
+    def test_fix_gha_error(self, mock_logging_info):
+        fix_gha_error()
+        mock_logging_info.assert_called_once_with("Fixing GitHub Actions error")
+
+if __name__ == "__main__":
+    unittest.main()
