@@ -34,6 +34,6 @@ jobs:
       - name: Run tests
         run: pytest
 
-      - name: Build and deploy
+      - name: Deploy
         run: |
-          # Add commands to build and deploy here
+          # Add commands to deploy here
