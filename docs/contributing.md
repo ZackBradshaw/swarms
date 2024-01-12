@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to Swarms! We welcome contributions from the community to help improve usability and readability. By contributing, you can be a part of creating a dynamic and interactive AI system.
+Thank you for your interest in contributing to ZackBradshaw/swarms: Automating all digital activities with millions of autonomous AI Agents! We welcome contributions from the community to help improve usability and readability. By contributing, you can be a part of creating a dynamic and interactive AI system.
 
 To get started, please follow the guidelines below.
 
@@ -68,7 +68,7 @@ Follow the typical PR process to contribute changes.
 
 We have a growing list of tasks and issues that you can contribute to. To get started, follow these steps:
 
-1. Visit the [Swarms GitHub repository](https://github.com/kyegomez/swarms) and browse through the existing issues.
+1. Visit the [Swarms GitHub repository](https://github.com/kyegomez/ZackBradshaw/swarms) and browse through the existing issues.
 
 2. Find an issue that interests you and make a comment stating that you would like to work on it. Include a brief description of how you plan to solve the problem and any questions you may have.
 
