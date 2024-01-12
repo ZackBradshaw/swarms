@@ -1,5 +1,7 @@
 from typing import Dict, List
 
+from tool import Tool
+
 
 class AbstractAgent:
     """(In preview) An abstract class for AI agent.
@@ -15,6 +17,9 @@ class AbstractAgent:
     """
 
     def __init__(
+        self,
+        name: str,
+        tools: List[Tool],(
         self,
         name: str,
         # tools: List[Tool],
@@ -34,7 +39,10 @@ class AbstractAgent:
 
     def reset(self):
         """(Abstract method) Reset the agent."""
-        """init tools"""
+        """        """Initialize the tools for the agent."""
+        pass
+
+    def reset(self): """(Abstract method) Reset the agent.""""""
 
     def memory(self, memory_store):
         """init memory"""
