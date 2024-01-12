@@ -41,7 +41,7 @@ From inside the directory run:
 
 To run `swarms-docs` locally run: 
 
-```mkdocs serve```
+```poetry install && mkdocs serve```
 
 You should see something similar to the following: 
 
