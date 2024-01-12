@@ -71,7 +71,7 @@ pre-commit --version
 pre-commit install
 ```
 
-Now when you make a git commit, the black code formatter and ruff linter will run.
+Now when you make a git commit, the black code formatter and ruff linter will run. Be sure to follow the Google Python style guide for code quality. Make sure the base branch is develop.
 
 Furthermore, the pre-commit checks will be automatically enforced with every pull request opened, streamlining the code review process and ensuring that all contributions adhere to our quality standards. Configure the pre-commit hooks in the relevant file `pre-commit-config.yaml`.
 
@@ -151,5 +151,6 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 
 
 ## 📄 license
+- To maintain code quality, make sure to follow the [Google Python style guide](https://google.github.io/styleguide/pyguide.html) for reference.
 
 By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
