@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-glightbox
-      - run: pip install "mkdocstrings[python]"
+      - run: pip install mkdocs-material==x.x.x
+      - run: pip install mkdocs-glightbox==x.x.x
+      - run: pip install "mkdocstrings[python]==x.x.x"
       - run: mkdocs gh-deploy --force
