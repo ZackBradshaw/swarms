@@ -26,6 +26,8 @@ class AbstractAgent:
         """
         # a dictionary of conversations, default value is list
         self._name = name
+        self._tools = []
+        self._memory = None
 
     @property
     def name(self):
@@ -60,6 +62,7 @@ class AbstractAgent:
 
     def step(self, message: str):
         """Step through the agent"""
+        # TODO: complete the step logic
 
     def _astep(self, message: str):
         """Asynchronous step"""
