@@ -58,17 +58,17 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit (https://pre-commit.com/)
 
-```bash
+
+
 
 ```
 
 - Check that it's installed
 
 ```bash
-pre-commit --version
-pre-commit install
+
+
 ```
 
 Now when you make a git commit, the black code formatter and ruff linter will run on every git commit. Be sure to follow the Google Python style guide for code quality. Make sure the base branch is develop.
