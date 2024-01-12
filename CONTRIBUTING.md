@@ -45,6 +45,7 @@ Make any changes you want to the project code, then run the following commands t
 ```bash
 git add .
 git commit -m "Your commit message"
+pre-commit run --all-files
 git push -u origin main
 ```
 
@@ -60,8 +61,10 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 - Install pre-commit (https://pre-commit.com/)
 
-```bash
+```
 
+- Install pre-commit by running the following command: `poetry run pre-commit install`
+Once pre-commit is installed, it will automatically run when you make a git commit to ensure code quality and consistency.
 ```
 
 - Now when you make a git commit, the black code formatter and ruff linter will run.
