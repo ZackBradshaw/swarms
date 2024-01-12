@@ -24,7 +24,7 @@ Swarms is designed to provide modular building blocks to build scalable swarms o
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
 
 ### Requirements:
-- New class and or function Module with documentation in docstrings with error handling
+- New class and or function Module with documentation in docstrings with error handling, including unit tests and examples in the documentation.
 - Tests using pytest in tests folder in the same module folder
 - Documentation in the docs/swarms/module_name folder and then added into the mkdocs.yml
 
@@ -65,11 +65,16 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit (https://pre-commit.com/)
-
+- Run the following command to install pre-commit:
 ```bash
-
+<insert the correct command to install pre-commit>
 ```
+
+- After installing pre-commit, make sure to run the pre-commit hooks against the modified files. Use the following command to do so:
+```bash
+pytest
+```
+- If the pre-commit tool reports any issues, it is important to resolve them before proceeding with the commit.
 
 - Check that it's installed
 
@@ -88,7 +93,8 @@ To run the pre-commit tool, follow these steps:
 2. Once pre-commit is installed, navigate to the project's root directory.
 
 3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
-
+new line(s) to append to snippet 0
+new line(s) to append to snippet 0
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 
@@ -96,7 +102,7 @@ To run the pre-commit tool, follow these steps:
 
 All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
 
-`swarms` adheres to the [Google Python docstring style](https://google.github.io/python-styleguide/python_style_rules.html#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
+`swarms` adheres to the [Google Python docstring style guide](https://google.github.io/styleguide/pyguide.html) for writing docstrings. Please refer to the [style guide](https://google.github.io/styleguide/pyguide.html) while writing docstrings for your contribution. Please refer to the style guide while writing docstrings for your contribution.
 
 ### Type checking
 
@@ -109,6 +115,10 @@ On the next page, review your changes then click "Create pull request":
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
 When creating new functions, please ensure you have the following:
+    - Unit tests for the function.
+    - Examples in the documentation for the function.
+    - Created an entry in our docs to autogenerate the documentation for the function.
+    - Please share a Google Colab with minimal code to test the new feature or reproduce PR whenever it is possible.
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
@@ -144,7 +154,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    chmod +x code_quality.sh
    ```
 
-4. Run the script:
+4. section removed:
    ```sh
    ./code-quality.sh
    ```
@@ -163,4 +173,6 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 
 In case of a failed GitHub Actions run, follow these steps to analyze, debug, and resolve the issue.
 
-By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
+By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md)
+
+For guidelines on writing docstrings, refer to the [Google Python docstring style guide](https://google.github.io/styleguide/pyguide.html) and provide clear and concise documentation for your code changes.
