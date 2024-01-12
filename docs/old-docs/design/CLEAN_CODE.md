@@ -1,4 +1,7 @@
-Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.
+<relevant_file file_path="/mnt/data/CLEAN_CODE.md">
+# Good example
+    def calculate_average(numbers: List[int]) -> float:
+        """Calculate and return the average of a list of numbers."""
 
 ## General rules
 1. Follow standard conventions.
