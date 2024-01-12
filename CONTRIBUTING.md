@@ -127,12 +127,11 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 * Add a reminder to share a Google Colab for testing new features.
 
 ## 🧪 tests
-- Run all the tests in the tests folder
-   - Run all the tests in the tests folder
-   ```bash
-   pytest tests/
+To run all the tests in the tests folder using pytest, execute the command:
    ```
-   
+   poetry run pytest
+   ```
+   This command will run all the tests in the tests folder using pytest.
 ## Code Quality
 (Code quality instructions removed for relevance to this issue)
 
