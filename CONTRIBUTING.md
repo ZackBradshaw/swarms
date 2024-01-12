@@ -67,7 +67,7 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 - Check that it's installed
 
 ```bash
-pre-commit --version
+pre-commit --version and `code-quality.sh`. | Run the command `pre-commit --version` to verify that pre-commit and `code-quality.sh` are installed.
 ```
 
 Now when you make a git commit, the black code formatter and ruff linter will run.
@@ -150,4 +150,4 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 
 ## 📄 license
 
-By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
+By contributing, you agree that your contributions will be licensed under an [MIT license. By contributing, you also agree that your contributions will adhere to the code quality standards enforced by the `pre-commit` tool and the `code-quality.sh` script.](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
