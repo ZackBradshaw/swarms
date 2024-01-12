@@ -30,7 +30,7 @@ class AbstractWorker:
     def send(
         self,
         message: Union[Dict, str],
-        recipient,  # add AbstractWorker
+        recipient: AbstractWorker,
         request_reply: Optional[bool] = None,
     ):
         """(Abstract method) Send a message to another worker."""
@@ -38,7 +38,7 @@ class AbstractWorker:
     async def a_send(
         self,
         message: Union[Dict, str],
-        recipient,  # add AbstractWorker
+        recipient: AbstractWorker,
         request_reply: Optional[bool] = None,
     ):
         """(Aabstract async method) Send a message to another worker."""
@@ -46,9 +46,51 @@ class AbstractWorker:
     def receive(
         self,
         message: Union[Dict, str],
-        sender,  # add AbstractWorker
+        sender: AbstractWorker,
         request_reply: Optional[bool] = None,
     ):
+        """(Abstract method) Receive a message from another worker."""
+
+    async def a_receive(
+        self,
+        message: Union[Dict, str],
+        sender: AbstractWorker,
+        request_reply: Optional[bool] = None,
+    ):
+        """(Abstract async method) Receive a message from another worker."""
+
+    def reset(self):
+        """(Abstract method) Reset the worker."""
+
+    def generate_reply(
+        self,
+        messages: Optional[List[Dict]] = None,
+        sender: Optional[AbstractWorker] = None,
+        **kwargs,
+    ) -> Union[str, Dict, None]:
+        """(Abstract method) Generate a reply based on the received messages.
+
+        Args:
+            messages (list[dict]): a list of messages received.
+            sender: sender of an Agent instance.
+        Returns:
+            str or dict or None: the generated reply. If None, no reply is generated.
+        """
+
+    async def a_generate_reply(
+        self,
+        messages: Optional[List[Dict]] = None,
+        sender: Optional[AbstractWorker] = None,
+        **kwargs,
+    ) -> Union[str, Dict, None]:
+        """(Abstract async method) Generate a reply based on the received messages.
+
+        Args:
+            messages (list[dict]): a list of messages received.
+            sender: sender of an Agent instance.
+        Returns:
+            str or dict or None: the generated reply. If None, no reply is generated.
+        """
         """(Abstract method) Receive a message from another worker."""
 
     async def a_receive(
