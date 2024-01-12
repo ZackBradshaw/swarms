@@ -63,7 +63,10 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 ```
 
-- Install pre-commit by running the following command: `poetry run pre-commit install`
+- Install pre-commit using poetry:
+```bash
+poetry run pre-commit install
+```
 Once pre-commit is installed, it will automatically run when you make a git commit to ensure code quality and consistency.
 ```
 
