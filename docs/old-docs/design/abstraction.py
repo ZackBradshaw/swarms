@@ -1,7 +1,7 @@
 from swarms import Model, Agent, vectorstore, tools, orchestrator
 
 # 1 model
-Model(openai)
+Model(swarm) # abstraction updated to reflect current implementation
 
 # 2 agent level
 Agent(model, vectorstore, tools)
