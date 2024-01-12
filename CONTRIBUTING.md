@@ -83,6 +83,14 @@ To run the pre-commit tool, follow these steps:
 
 ### Docstrings
 
+Any new functions or classes added to `swarms` should include Google Python docstrings. This is a prerequisite for contributing to the library.
+
+The Google Python docstring style and usage guide can be found [here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Please refer to the style guide while writing docstrings for your contribution.
+
+Any new functions or classes added to `swarms` should include Google Python docstrings. This is a prerequisite for contributing to the library.
+
+The Google Python docstring style guide can be found [here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Please refer to the style guide while writing docstrings for your contribution.
+
 All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
 
 `swarms` adheres to the [Google Python docstring style](https://google.com/google/styleguide/blob/gh-pages/python_style_rules.md#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
