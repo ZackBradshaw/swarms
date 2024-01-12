@@ -72,7 +72,7 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 - After installing pre-commit, make sure to run the pre-commit hooks against the modified files. Use the following command to do so:
 ```bash
-<insert the command to run pre-commit hooks>
+pytest
 ```
 - If the pre-commit tool reports any issues, it is important to resolve them before proceeding with the commit.
 
@@ -93,7 +93,8 @@ To run the pre-commit tool, follow these steps:
 2. Once pre-commit is installed, navigate to the project's root directory.
 
 3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
-
+new line(s) to append to snippet 0
+new line(s) to append to snippet 0
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 
