@@ -58,9 +58,7 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit by running the following command: `pip install pre-commit` followed by `pre-commit install`
-
-- Check the pre-commit version by running the following command: `pre-commit --version`
+- Follow the following guide on code quality a python guide or your PR will most likely be overlooked: [CLICK HERE](https://google.github.io/styleguide/pyguide.html)
 
 Now when you make a git commit, the black code formatter and ruff linter will run.
 
@@ -120,19 +118,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 ## Code Quality
 (Code quality instructions removed for relevance to this issue)
 
-3. Make sure the script has execute permissions:
-   ```sh
-   chmod +x code_quality.sh
-   ```
-
-4. Run the script:
-   ```sh
-   ./code-quality.sh
-   ```
-   
-If the script requires administrative privileges, you might need to run it with `sudo`:
-```sh
-sudo ./code-quality.sh
+Replaced with pre-commit tool instructions.
 ```
 
 Please replace `/path/to/directory` with the actual path where the `code-quality.sh` script is located on your system.
