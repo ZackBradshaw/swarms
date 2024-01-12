@@ -63,7 +63,6 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 - Check the pre-commit version by running the following command: `pre-commit --version`
 
 Now when you make a git commit, the black code formatter and ruff linter will run.
-
 Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
 
 To run the pre-commit tool, follow these steps:
