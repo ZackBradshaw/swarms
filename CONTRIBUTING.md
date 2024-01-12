@@ -65,11 +65,16 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit (https://pre-commit.com/)
-
+- Run the following command to install pre-commit:
 ```bash
-
+<insert the correct command to install pre-commit>
 ```
+
+- After installing pre-commit, make sure to run the pre-commit hooks against the modified files. Use the following command to do so:
+```bash
+<insert the command to run pre-commit hooks>
+```
+- If the pre-commit tool reports any issues, it is important to resolve them before proceeding with the commit.
 
 - Check that it's installed
 
