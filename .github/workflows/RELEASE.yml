@@ -44,6 +44,6 @@ jobs:
           commit: master
       - name: Publish to PyPI
         env:
-          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
+          POETRY_PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           poetry publish
