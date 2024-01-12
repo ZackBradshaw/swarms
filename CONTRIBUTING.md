@@ -60,19 +60,19 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 - Install pre-commit by running the following command: `pip install pre-commit`
 
-- Check the pre-commit version by running the following command: `pre-commit --version`
+- Check the pre-commit version by running the following command: `pre-commit --version -h`
 
-Now when you make a git commit, the black code formatter and ruff linter will run.
+After pre-commit is installed, it will run the black code formatter and ruff linter automatically before making a git commit.
 
 Furthermore, we have integrated a pre-commit GitHub Action into our workflow. This means that with every pull request opened, the pre-commit checks will be automatically enforced, streamlining the code review process and ensuring that all contributions adhere to our quality standards.
 
 To run the pre-commit tool, follow these steps:
 
-1. Install pre-commit by running the following command: `poetry install dev`. It will not only install pre-commit but also install all the deps and dev-deps of project
+1. Install pre-commit by running the following command: `pip install pre-commit`
 
 2. Once pre-commit is installed, navigate to the project's root directory.
 
-3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, it is important to resolve them before making a commit. The pre-commit tool will provide feedback on how to resolve the issues. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
