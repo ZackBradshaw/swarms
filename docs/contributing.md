@@ -129,7 +129,7 @@ Please note that during the review process, you may be asked to make changes or 
 
 If you are interested in setting up the Swarms development environment, please follow the instructions provided in the [developer setup guide](docs/developer-setup.md). This guide provides an overview of the different tools and technologies used in the project.
 
-## Join the Agora Community
+## Join the Agora Community and refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions/troubleshooting) for detailed guidance on troubleshooting GitHub Actions.
 
 Swarms is brought to you by Agora, the open-source AI research organization. Join the Agora community to connect with other researchers and developers working on AI projects.
 
