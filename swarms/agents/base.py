@@ -42,7 +42,11 @@ class AbstractAgent:
         """        """Initialize the tools for the agent."""
         pass
 
-    def reset(self): """(Abstract method) Reset the agent.""""""
+    def reset(self):
+        """Reset the agent to its initial state."""
+        pass
+
+    def reset(self): """(Abstract method) Reset the agent.""""""(Abstract method) Reset the agent.""""""
 
     def memory(self, memory_store):
         """init memory"""
