@@ -125,7 +125,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 
 ## 🧪 tests
 - Run all the tests in the tests folder
-   ```pytest .```
+   ```pytest tests/```
    
 ## Code Quality
 (Code quality instructions removed for relevance to this issue)
@@ -153,4 +153,4 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 ## 📄 license
 
 By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
-- Refer to the newly created `code-quality.sh` script for code quality checks and improvements.
+- Refer to the `code-quality.sh` script for running code quality checks.
