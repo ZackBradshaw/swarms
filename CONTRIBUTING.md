@@ -10,7 +10,7 @@ We welcome contributions to:
 
 1. Add a new feature to the library (guidance below).
 2. Improve our documentation and add examples to make it clear how to leverage the swarms library.
-3. Report bugs and issues and contribute to fixing bugs and issues in the project. Please report bugs and issues by submitting an Issue on the GitHub repository.
+3. Report bugs and issues and contribute to fixing bugs and issues and contribute to testing and providing examples in the project. Please report bugs and issues by submitting an Issue on the GitHub repository and provide unit tests and examples in the documentation.
 4. Submit a request for a new feature.
 5. Improve our test coverage and contribute tests and examples. See the guidelines below for contributing tests.
 
@@ -112,7 +112,7 @@ When creating new functions, please ensure you have the following:
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
-3. Examples in the documentation for the function.
+3. Provide examples in the documentation for the function.
 
 
 
