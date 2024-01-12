@@ -162,7 +162,7 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    ./code-quality.sh
    ```
    
-If the script requires administrative privileges, you might need to run it with `sudo`: 
+5. If the script requires administrative privileges, run: 
 ```sh
 sudo ./code-quality.sh
 ```:
