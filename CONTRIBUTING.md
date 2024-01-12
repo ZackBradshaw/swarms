@@ -124,6 +124,39 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
 * Add a reminder to share a Google Colab for testing new features.
 
 ## 🧪 tests
+### Type checking
+
+Then, go back to your fork of the `swarms` repository, click "Pull Requests", and click "New Pull Request".
+
+Make sure the `base` branch is `main` before submitting your PR.
+
+On the next page, review your changes then click "Create pull request":
+
+Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
+
+When creating new functions, please ensure you have the following:
+
+1. Docstrings for the function and all parameters.
+2. Unit tests for the function.
+3. Examples in the documentation for the function.
+4. Created an entry in our docs to autogenerate the documentation for the function.
+5. Please share a Google Colab with minimal code to test new feature or reproduce PR whenever it is possible. Please ensure that Google Colab can be accessed without any issue.
+
+All pull requests will be reviewed by the maintainers of the project. We will provide feedback and ask for changes if necessary.
+
+PRs must pass all tests and linting requirements before they can be merged.
+
+## 📝 documentation
+
+The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs`.
+
+To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
+
+You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
+
+* Add a reminder to share a Google Colab for testing new features.
+
+## 🧪 tests
 - Run all the tests in the tests folder
    ```pytest tests/```
    
