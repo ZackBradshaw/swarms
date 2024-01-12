@@ -58,7 +58,10 @@ git push -u origin main
 This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain code quality and consistency. Before submitting a pull request or making any commits, it is important to run the pre-commit tool to ensure that your changes meet the project's guidelines.
 
 
-- Install pre-commit (https://pre-commit.com/)
+- Install pre-commit (https://pre-commit.com/) by running the following command: `poetry run pre-commit install`.
+```bash
+poetry run pre-commit install
+```
 
 ```bash
 
@@ -80,7 +83,9 @@ To run the pre-commit tool, follow these steps:
 
 2. Once pre-commit is installed, navigate to the project's root directory.
 
-3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+3. Run the command `poetry run pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them.
+
+If any issues are found by the pre-commit tool, follow the provided feedback to make the necessary changes. Once the changes are made, re-run the `poetry run pre-commit run --all-files` command to reevaluate the code and ensure that all issues are resolved. Repeat this process until the pre-commit tool approves the changes.
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
