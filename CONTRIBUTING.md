@@ -61,13 +61,13 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 - Install pre-commit (https://pre-commit.com/)
 
 ```bash
-pip install pre-commit
+pip install pre-commit==2.15.0
 ```
 
 - Check that it's installed
 
 ```bash
-pre-commit --version
+pre-commit --version && pre-commit install
 ```
 
 Now when you make a git commit, the black code formatter and ruff linter will run.
@@ -76,7 +76,7 @@ Furthermore, we have integrated a pre-commit GitHub Action into our workflow. Th
 
 To run the pre-commit tool, follow these steps:
 
-1. Install pre-commit by running the following command: `poetry install`. It will not only install pre-commit but also install all the deps and dev-deps of project
+1. Install pre-commit by running the following command: `poetry install && pre-commit install`. It will not only install pre-commit but also install all the deps and dev-deps of project
 
 2. Once pre-commit is installed, navigate to the project's root directory.
 
