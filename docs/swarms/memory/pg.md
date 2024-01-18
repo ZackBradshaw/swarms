@@ -137,6 +137,9 @@ def upsert_vector(
     vector_id: Optional[str] = None,
     namespace: Optional[str] = None,
     meta: Optional[dict] = None,
+    vector_id: Optional[str] = None,
+    namespace: Optional[str] = None,
+    meta: Optional[dict] = None,
     **kwargs
 ) -> str:
     """
