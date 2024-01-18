@@ -97,7 +97,7 @@ def setup(
     install_vector_extension: bool = True,
 ) -> None:
     """
-    Provides a mechanism to initialize the database schema and extensions.
+    Provides a mechanism to initialize the database schema, install the necessary extensions, and configure the database setup.
 
     Parameters:
     - create_schema (bool): If True, creates the necessary database schema for vector storage. Default: True.
@@ -113,7 +113,7 @@ def setup(
 vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
 
 # Set up the database with default settings
-vector_store.setup()
+vector_store.setup(create_schema=True, install_uuid_extension=True, install_vector_extension=True)
 ```
 
 #### Example 2: Customized Database Setup
@@ -123,7 +123,7 @@ vector_store.setup()
 vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
 
 # Set up the database with customized settings
-vector_store.setup(create_schema=False, install_uuid_extension=True, install_vector_extension=True)
+vector_store.setup(create_schema=True, install_uuid_extension=True, install_vector_extension=True)
 ```
 
 ### 4.2 Upserting Vectors <a name="upserting-vectors"></a>
