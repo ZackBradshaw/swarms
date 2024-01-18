@@ -78,7 +78,209 @@ The class includes validators for the `connection_string` and `engine` attribute
 ### 3.2 Initialization
 
 During initialization, the class checks if an engine is provided. If an engine is not provided, it creates a new database connection using the `connection_string` and `create_engine_params`.
+### 4.3 Loading Vector Entries <a name="loading-vector-entries"></a>
 
+You can load vector entries from the collection using the `load_entry` and `load_entries` methods.
+
+#### 4.3.1 Loading a Single Entry
+
+The `load_entry` method allows you to load a specific vector entry based on its identifier and optional namespace.
+
+```python
+def load_entry(
+    self, vector_id: str, namespace: Optional[str] = None
+) -> BaseVectorStore.Entry:
+    """
+    Retrieves a specific vector entry from the collection based on its identifier and optional namespace.
+
+    Parameters:
+    - vector_id (str): The ID of the vector to retrieve.
+    - namespace (Optional[str]): An optional namespace for filtering. Default: None.
+
+    Returns:
+    - BaseVectorStore.Entry: The loaded vector entry.
+    """
+```
+
+#### Example: Loading a Single Entry
+
+```python
+# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
+
+# Load a specific vector entry
+loaded_entry = vector_store.load_entry(vector_id="unique-vector-id", namespace="your-namespace")
+
+if loaded_entry is not None:
+    loaded_vector = loaded_entry.vector
+    loaded_meta = loaded_entry.meta
+    # Use the loaded vector and metadata as needed
+else:
+    # Vector not found
+```
+
+#### 4.3.2 Loading Multiple Entries
+
+The `load_entries` method allows you to load all vector entries from the collection, optionally filtering by namespace.
+
+```python
+def load_entries(
+    self, namespace: Optional[str] = None
+) -> list[BaseVectorStore.Entry]:
+    """
+    Retrieves all vector entries from the collection, optionally filtering to only those that match the provided namespace.
+
+    Parameters:
+    - namespace (Optional[str]): An optional namespace for filtering. Default: None.
+
+    Returns:
+    - list[BaseVectorStore.Entry]: A list of loaded vector entries.
+    """
+```
+
+#### Example: Loading Multiple Entries
+
+```python
+# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
+
+# Load all vector entries in the specified namespace
+entries = vector_store.load_entries(namespace="your-namespace")
+
+# Process the loaded entries
+for entry in entries:
+    vector_id = entry.id
+    vector = entry.vector
+    meta = entry.meta
+
+    # Handle the loaded entries as needed
+```
+
+### 4.4 Querying Vectors <a name="querying-vectors"></a>
+### 4.4 Querying Vectors <a name="querying-vectors"></a>
+
+You can perform vector queries to find vectors similar to a given query vector using the `query` method. You can specify the query string, the maximum number of results to return, and other options.
+
+```python
+def query(
+    self,
+    query: str,
+    count: Optional[int] = BaseVectorStore.DEFAULT_QUERY_COUNT,
+    namespace: Optional[str] = None,
+    include_vectors: bool = False,
+    distance_metric: str = "cosine_distance",
+    **kwargs
+) -> list[BaseVectorStore.QueryResult]:
+    """
+    Performs a search on the collection to find vectors similar to the provided input vector,
+    optionally filtering to only those that match the provided namespace.
+
+    Parameters:
+    - query (str): The query string to find similar vectors.
+    - count (Optional[int]): Maximum number of results to return. Default: BaseVectorStore.DEFAULT_QUERY_COUNT.
+    - namespace (Optional[str]): An optional namespace for filtering. Default: None.
+    - include_vectors (bool): If True, includes vectors in the query results. Default: False.
+    - distance_metric (str): The distance metric to use for similarity measurement.
+      Options: "cosine_distance", "l2_distance", "inner_product". Default: "cosine_distance".
+    - **kwargs: Additional keyword arguments.
+
+    Returns:
+    - list[BaseVectorStore.QueryResult]: A list of query results, each containing vector ID, vector (if included), score, and metadata.
+    """
+```
+
+#### Example: Querying Vectors
+
+```python
+# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
+
+# Perform a vector query
+query_string = "your-query-string"
+count = 10  # Maximum number of results to return
+namespace = "your-namespace"
+include_vectors = False  # Set to True to include vectors in results
+distance_metric = "cosine_distance"
+
+results = vector_store.query(
+    query=query_string,
+    count=count,
+    namespace=namespace,
+    include_vectors=include_vectors,
+    distance_metric=distance_metric
+)
+
+# Process the query results
+for result in results:
+    vector_id = result.id
+    vector = result.vector
+    score = result.score
+    meta = result.meta
+
+    # Handle the results as needed
+```
+### 4.4 Querying Vectors <a name="querying-vectors"></a>
+
+You can perform vector queries to find vectors similar to a given query vector using the `query` method. You can specify the query string, the maximum number of results to return, and other options.
+
+```python
+def query(
+    self,
+    query: str,
+    count: Optional[int] = BaseVectorStore.DEFAULT_QUERY_COUNT,
+    namespace: Optional[str] = None,
+    include_vectors: bool = False,
+    distance_metric: str = "cosine_distance",
+    **kwargs
+) -> list[BaseVectorStore.QueryResult]:
+    """
+    Performs a search on the collection to find vectors similar to the provided input vector,
+    optionally filtering to only those that match the provided namespace.
+
+    Parameters:
+    - query (str): The query string to find similar vectors.
+    - count (Optional[int]): Maximum number of results to return. Default: BaseVectorStore.DEFAULT_QUERY_COUNT.
+    - namespace (Optional[str]): An optional namespace for filtering. Default: None.
+    - include_vectors (bool): If True, includes vectors in the query results. Default: False.
+    - distance_metric (str): The distance metric to use for similarity measurement.
+      Options: "cosine_distance", "l2_distance", "inner_product". Default: "cosine_distance".
+    - **kwargs: Additional keyword arguments.
+
+    Returns:
+    - list[BaseVectorStore.QueryResult]: A list of query results, each containing vector ID, vector (if included), score, and metadata.
+    """
+```
+
+#### Example: Querying Vectors
+
+```python
+# Initialize the PgVectorVectorStore instance
+vector_store = PgVectorVectorStore(connection_string="your-db-connection-string", table_name="your-table-name")
+
+# Perform a vector query
+query_string = "your-query-string"
+count = 10  # Maximum number of results to return
+namespace = "your-namespace"
+include_vectors = False  # Set to True to include vectors in results
+distance_metric = "cosine_distance"
+
+results = vector_store.query(
+    query=query_string,
+    count=count,
+    namespace=namespace,
+    include_vectors=include_vectors,
+    distance_metric=distance_metric
+)
+
+# Process the query results
+for result in results:
+    vector_id = result.id
+    vector = result.vector
+    score = result.score
+    meta = result.meta
+
+    # Handle the results as needed
+```
 ---
 
 ## 4. Functionality and Usage <a name="functionality-and-usage"></a>
