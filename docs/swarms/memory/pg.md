@@ -73,7 +73,9 @@ Attributes:
 
 ### 3.1 Attribute Validators
 
-The class includes validators for the `connection_string` and `engine` attributes to ensure their proper usage. These validators help maintain consistency in attribute values.
+#### 4.4 Querying Vectors - Method Overview <a name="querying-vectors"></a>
+
+Before diving into the details of the querying vectors with the PgVectorVectorStore class, let's provide an overview of the purpose and functionality of the `query` method.
 
 ### 3.2 Initialization
 
