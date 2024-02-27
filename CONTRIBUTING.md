@@ -16,6 +16,11 @@ We welcome contributions to:
 
 ### Contributing Features ✨
 
+### Requirements for New Functions
+- Any new functions or classes added to `swarms` should include docstrings, unit tests, and examples in the documentation to qualify for contribution.
+- The Google Python docstring style and usage guide can be found [here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Please refer to the style guide while writing docstrings for your contribution.
+- All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
+
 Swarms is designed to provide modular building blocks to build scalable swarms of autonomous agents!
 
 Before you contribute a new feature, consider submitting an Issue to discuss the feature so the community can weigh in and assist.
@@ -59,6 +64,13 @@ This project utilizes the [pre-commit](https://pre-commit.com/) tool to maintain
 
 
 - Install pytest by running the following command: `pip install pytest`
+- poetry install dev
+- pre-commit run --all-files
+- pre-commit install
+- Check the pre-commit version by running the following command: `pre-commit --version`
+- poetry install dev
+- pre-commit run --all-files
+- pre-commit install
 
 - Check the pre-commit version by running the following command: `pre-commit --version`
 
@@ -68,18 +80,31 @@ Furthermore, we have integrated a pre-commit GitHub Action into our workflow. Th
 
 To run the pre-commit tool, follow these steps:
 
-1. Install pre-commit by running the following command: `poetry install dev`. It will not only install pre-commit but also install all the deps and dev-deps of project
-
+1. Install pre-commit by running the following command: `poetry install dev`
 2. Once pre-commit is installed, navigate to the project's root directory.
-
-3. Run the command `pre-commit run --all-files`. This will execute the pre-commit hooks configured for this project against the modified files. If any issues are found, the pre-commit tool will provide feedback on how to resolve them. Make the necessary changes and re-run the pre-commit command until all issues are resolved.
+3. Run the command `pre-commit run --all-files`
+4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
 
 4. You can also install pre-commit as a git hook by execute `pre-commit install`. Every time you made `git commit` pre-commit run automatically for you.
+
+- Install pytest by running the following command: `pip install pytest`
 
 
 ### Docstrings
 
+Any new functions or classes added to `swarms` should include Google Python docstrings. This is a prerequisite for contributing to the library.
+
+The Google Python docstring style and usage guide can be found [here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Please refer to the style guide while writing docstrings for your contribution.
+
+Any new functions or classes added to `swarms` should include Google Python docstrings. This is a prerequisite for contributing to the library.
+
+The Google Python docstring style guide can be found [here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Please refer to the style guide while writing docstrings for your contribution.
+
 All new functions and classes in `swarms` should include docstrings. This is a prerequisite for any new functions and classes to be added to the library.
+
+- Run all the tests in the tests folder
+   ```pytest```
+   ```pytest```
 
 `swarms` adheres to the [Google Python docstring style](https://google.com/google/styleguide/blob/gh-pages/python_style_rules.md#383-functions-and-methods). Please refer to the style guide while writing docstrings for your contribution.
 
@@ -94,6 +119,9 @@ On the next page, review your changes then click "Create pull request":
 Next, write a description for your pull request, and click "Create pull request" again to submit it for review:
 
 When creating new functions, please ensure you have the following:
+1. Docstrings for the function and all parameters.
+2. Unit tests for the function.
+3. Examples in the documentation for the function.
 
 1. Docstrings for the function and all parameters.
 2. Unit tests for the function.
@@ -108,13 +136,17 @@ PRs do not need to pass all tests and linting requirements before they are merge
 ## 📝 documentation
 
 The `swarms` documentation is stored in a folder called `docs`. The project documentation is built using `mkdocs`.
+- Install pytest by running the following command: `pip install pytest`
 
 To run the documentation, install the project requirements with `poetry install dev`. Then, run `mkdocs serve` to start the documentation server.
 
 You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/).
 
 ## 🧪 tests
+- Install pytest by running the following command: `pip install pytest`
+
 - Run all the tests in the tests folder
+   ```pytest```
    ```pytest```
    
 ## Code Quality
@@ -130,7 +162,10 @@ You can learn more about mkdocs on the [mkdocs website](https://www.mkdocs.org/)
    ./code-quality.sh
    ```
    
-If the script requires administrative privileges, you might need to run it with `sudo`:
+5. If the script requires administrative privileges, run: 
+```sh
+sudo ./code-quality.sh
+```:
 ```sh
 sudo ./code-quality.sh
 ```
@@ -143,3 +178,5 @@ If you're asking for a specific content or functionality inside `code-quality.sh
 ## 📄 license
 
 By contributing, you agree that your contributions will be licensed under an [MIT license](https://github.com/kyegomez/swarms/blob/develop/LICENSE.md).
+Additionally, ensure your new functions adhere to the requirements mentioned above: docstrings, unit tests, and examples in the documentation.
+Additionally, ensure your new functions adhere to the requirements mentioned above: docstrings, unit tests, and examples in the documentation.
