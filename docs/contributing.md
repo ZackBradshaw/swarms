@@ -22,18 +22,7 @@ Our goal is to continuously improve Swarms by following this roadmap while also 
 ## Join the Swarms Community
 
 ## Troubleshooting GitHub Actions
-If you encounter issues with GitHub Actions, follow these troubleshooting steps to identify and fix common problems.
-
-### Analyzing Error Logs
-Examine the GitHub Actions error logs to identify potential issues. Look for error messages, warnings, or other indicators of problems.
-
-### Identifying Common Issues
-Common issues with GitHub Actions include incorrect workflow syntax, invalid interaction with external services, and authentication problems. By understanding these common issues, you can more easily diagnose the root cause of problems.
-
-### Proposing Solutions
-After identifying the issue, propose potential solutions based on the nature of the problem. This may involve fixing workflow syntax, adjusting environment variables, or updating GitHub Actions configuration.
-
-For detailed guidance on troubleshooting GitHub Actions, refer to the [GitHub Actions Documentation](https://docs.github.com/en/actions).
+If you encounter issues with GitHub Actions, refer to the [Troubleshooting GitHub Actions](troubleshooting_gha.md) guide for troubleshooting steps and solutions.
 
 Join the Swarms community on Discord to connect with other contributors, coordinate work, and receive support.
 
@@ -48,7 +37,6 @@ The easiest way to contribute to our docs is through our public [issue tracker](
 Swarms docs are built using [MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/). 
 
 To directly contribute to Swarms documentation, first fork the [swarms-docs](https://github.com/kyegomez/swarms-docs) repository to your GitHub account. Then clone your repository to your local machine.
-
 From inside the directory run: 
 
 ```pip install -r requirements.txt```
