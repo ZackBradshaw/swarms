@@ -1,7 +1,10 @@
 import hashlib
 import platform
-import uuid
 import socket
+import uuid
+
+from swarms.telemetry.check_update import check_for_package
+from swarms.telemetry.sys_info import system_info
 
 
 # Helper functions
@@ -41,12 +44,13 @@ def get_system_info():
         "ip_address": socket.gethostbyname(socket.gethostname()),
         "mac_address": ":".join(
             [
-                "{:02x}".format((uuid.getnode() >> elements) & 0xFF)
+                f"{(uuid.getnode() >> elements) & 0xFF:02x}"
                 for elements in range(0, 2 * 6, 8)
             ][::-1]
         ),
         "processor": platform.processor(),
         "python_version": platform.python_version(),
+        "Misc": system_info(),
     }
     return info
 
@@ -61,3 +65,24 @@ def generate_unique_identifier():
     system_info = get_system_info()
     unique_id = uuid.uuid5(uuid.NAMESPACE_DNS, str(system_info))
     return str(unique_id)
+
+
+def get_local_ip():
+    """Get local ip
+
+    Returns:
+        str: local ip
+
+    """
+    return socket.gethostbyname(socket.gethostname())
+
+
+def get_user_device_data():
+    data = {
+        "ID": generate_user_id(),
+        "Machine ID": get_machine_id(),
+        "System Info": get_system_info(),
+        "UniqueID": generate_unique_identifier(),
+        "Swarms [Version]": check_for_package("swarms"),
+    }
+    return data

@@ -10,23 +10,31 @@ dataframe/
 
 static/generated
 runs
+chroma
+Unit Testing Agent_state.json
 swarms/__pycache__
+artifacts
 venv
 .DS_Store
-
+Cargo.lock
 .DS_STORE
+Cargo.lock
 swarms/agents/.DS_Store
 
+logs
 _build
+conversation.txt
 stderr_log.txt
 
 .vscode
 .DS_STORE
 # Byte-compiled / optimized / DLL files
+Transcript Generator_state.json
 __pycache__/
 *.py[cod]
 *$py.class
 .grit
+swarm-worker-01_state.json
 error.txt
 
 # C extensions

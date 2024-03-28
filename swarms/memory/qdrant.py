@@ -1,16 +1,13 @@
-import subprocess
 from typing import List
 
 from httpx import RequestError
+from swarms.memory.base_vectordb import AbstractVectorDatabase
 
 try:
     from sentence_transformers import SentenceTransformer
 except ImportError:
     print("Please install the sentence-transformers package")
     print("pip install sentence-transformers")
-    print("pip install qdrant-client")
-    subprocess.run(["pip", "install", "sentence-transformers"])
-
 
 try:
     from qdrant_client import QdrantClient
@@ -22,10 +19,9 @@ try:
 except ImportError:
     print("Please install the qdrant-client package")
     print("pip install qdrant-client")
-    subprocess.run(["pip", "install", "qdrant-client"])
 
 
-class Qdrant:
+class Qdrant(AbstractVectorDatabase):
     """
     Qdrant class for managing collections and performing vector operations using QdrantClient.
 
@@ -82,7 +78,7 @@ class Qdrant:
                     f"Collection '{self.collection_name}' already"
                     " exists."
                 )
-        except Exception as e:
+        except Exception:
             self.client.create_collection(
                 collection_name=self.collection_name,
                 vectors_config=VectorParams(

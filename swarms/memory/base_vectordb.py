@@ -1,58 +1,114 @@
-from abc import ABC, abstractmethod
-from typing import Any, Dict
+from abc import ABC
 
 
-class VectorDatabase(ABC):
-    @abstractmethod
-    def add(
-        self, vector: Dict[str, Any], metadata: Dict[str, Any]
-    ) -> None:
+class AbstractVectorDatabase(ABC):
+    """
+    Abstract base class for a database.
+
+    This class defines the interface for interacting with a database.
+    Subclasses must implement the abstract methods to provide the
+    specific implementation details for connecting to a database,
+    executing queries, and performing CRUD operations.
+
+    """
+
+    def connect(self):
         """
-        add a vector into the database.
+        Connect to the database.
 
-        Args:
-            vector (Dict[str, Any]): The vector to add.
-            metadata (Dict[str, Any]): Metadata associated with the vector.
+        This method establishes a connection to the database.
+
         """
-        pass
 
-    @abstractmethod
-    def query(self, text: str, num_results: int) -> Dict[str, Any]:
+    def close(self):
         """
-        Query the database for vectors similar to the given vector.
+        Close the database connection.
 
-        Args:
-            text (Dict[str, Any]): The vector to compare against.
-            num_results (int): The number of similar vectors to return.
+        This method closes the connection to the database.
+
+        """
+
+    def query(self, query: str):
+        """
+        Execute a database query.
+
+        This method executes the given query on the database.
+
+        Parameters:
+            query (str): The query to be executed.
+
+        """
+
+    def fetch_all(self):
+        """
+        Fetch all rows from the result set.
+
+        This method retrieves all rows from the result set of a query.
 
         Returns:
-            Dict[str, Any]: The most similar vectors and their associated metadata.
-        """
-        pass
+            list: A list of dictionaries representing the rows.
 
-    @abstractmethod
-    def delete(self, vector_id: str) -> None:
         """
-        Delete a vector from the database.
 
-        Args:
-            vector_id (str): The ID of the vector to delete.
+    def fetch_one(self):
         """
-        pass
+        Fetch one row from the result set.
 
-    @abstractmethod
-    def update(
-        self,
-        vector_id: str,
-        vector: Dict[str, Any],
-        metadata: Dict[str, Any],
-    ) -> None:
-        """
-        Update a vector in the database.
+        This method retrieves one row from the result set of a query.
 
-        Args:
-            vector_id (str): The ID of the vector to update.
-            vector (Dict[str, Any]): The new vector.
-            metadata (Dict[str, Any]): The new metadata.
+        Returns:
+            dict: A dictionary representing the row.
+
         """
-        pass
+
+    def add(self, doc: str):
+        """
+        Add a new record to the database.
+
+        This method adds a new record to the specified table in the database.
+
+        Parameters:
+            table (str): The name of the table.
+            data (dict): A dictionary representing the data to be added.
+
+        """
+
+    def get(self, query: str):
+        """
+        Get a record from the database.
+
+        This method retrieves a record from the specified table in the database based on the given ID.
+
+        Parameters:
+            table (str): The name of the table.
+            id (int): The ID of the record to be retrieved.
+
+        Returns:
+            dict: A dictionary representing the retrieved record.
+
+        """
+
+    def update(self, doc):
+        """
+        Update a record in the database.
+
+        This method updates a record in the specified table in the database based on the given ID.
+
+        Parameters:
+            table (str): The name of the table.
+            id (int): The ID of the record to be updated.
+            data (dict): A dictionary representing the updated data.
+
+        """
+
+    def delete(self, message):
+        """
+        Delete a record from the database.
+
+        This method deletes a record from the specified table in the database based on the given ID.
+
+        Parameters:
+            table (str): The name of the table.
+            id (int): The ID of the record to be deleted.
+
+        """

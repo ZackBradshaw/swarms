@@ -3,12 +3,11 @@ import queue
 import threading
 from time import sleep
 from typing import Callable, Dict, List, Optional
-import asyncio
-import concurrent.futures
 
 from termcolor import colored
 
 from swarms.structs.agent import Agent
+from swarms.structs.base import BaseStructure
 from swarms.utils.decorators import (
     error_decorator,
     log_decorator,
@@ -16,7 +15,7 @@ from swarms.utils.decorators import (
 )
 
 
-class AutoScaler:
+class AutoScaler(BaseStructure):
     """
     AutoScaler class
 
@@ -242,7 +241,7 @@ class AutoScaler:
                 task = self.task_queue.get()
                 if task:
                     available_agent = next(
-                        (agent for agent in self.agents_pool)
+                        agent for agent in self.agents_pool
                     )
                     if available_agent:
                         available_agent.run(task)
@@ -262,11 +261,17 @@ class AutoScaler:
 
     def balance_load(self):
         """Distributes tasks among agents based on their current load."""
-        while not self.task_queue.empty():
-            for agent in self.agents_pool:
-                if agent.can_accept_task():
-                    task = self.task_queue.get()
-                    agent.run(task)
+        try:
+            while not self.task_queue.empty():
+                for agent in self.agents_pool:
+                    if agent.can_accept_task():
+                        task = self.task_queue.get()
+                        agent.run(task)
+        except Exception as error:
+            print(
+                f"Error balancing load: {error} try again with a new"
+                " task"
+            )
 
     def set_scaling_strategy(
         self, strategy: Callable[[int, int], int]
@@ -276,17 +281,23 @@ class AutoScaler:
 
     def execute_scaling_strategy(self):
         """Execute the custom scaling strategy if defined."""
-        if hasattr(self, "custom_scale_strategy"):
-            scale_amount = self.custom_scale_strategy(
-                self.task_queue.qsize(), len(self.agents_pool)
+        try:
+            if hasattr(self, "custom_scale_strategy"):
+                scale_amount = self.custom_scale_strategy(
+                    self.task_queue.qsize(), len(self.agents_pool)
+                )
+                if scale_amount > 0:
+                    for _ in range(scale_amount):
+                        self.agents_pool.append(self.agent())
+                elif scale_amount < 0:
+                    for _ in range(abs(scale_amount)):
+                        if len(self.agents_pool) > 10:
+                            del self.agents_pool[-1]
+        except Exception as error:
+            print(
+                f"Error executing scaling strategy: {error} try again"
+                " with a new task"
             )
-            if scale_amount > 0:
-                for _ in range(scale_amount):
-                    self.agents_pool.append(self.agent())
-            elif scale_amount < 0:
-                for _ in range(abs(scale_amount)):
-                    if len(self.agents_pool) > 10:
-                        del self.agents_pool[-1]
 
     def report_agent_metrics(self) -> Dict[str, List[float]]:
         """Collects and reports metrics from each agent."""

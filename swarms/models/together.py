@@ -16,7 +16,7 @@ def together_api_key_env():
     return os.getenv("TOGETHER_API_KEY")
 
 
-class TogetherModel(AbstractLLM):
+class TogetherLLM(AbstractLLM):
     """
     GPT-4 Vision API
 
@@ -65,7 +65,7 @@ class TogetherModel(AbstractLLM):
         *args,
         **kwargs,
     ):
-        super(TogetherModel).__init__(*args, **kwargs)
+        super(TogetherLLM).__init__(*args, **kwargs)
         self.together_api_key = together_api_key
         self.logging_enabled = logging_enabled
         self.model_name = model_name
@@ -119,18 +119,15 @@ class TogetherModel(AbstractLLM):
             )
 
             out = response.json()
-            if "choices" in out and out["choices"]:
-                content = (
-                    out["choices"][0]
-                    .get("message", {})
-                    .get("content", None)
-                )
-                if self.streaming_enabled:
-                    content = self.stream_response(content)
-                return content
-            else:
-                print("No valid response in 'choices'")
-                return None
+            content = (
+                out["choices"][0]
+                .get("message", {})
+                .get("content", None)
+            )
+            if self.streaming_enabled:
+                content = self.stream_response(content)
+
+            return content
 
         except Exception as error:
             print(
