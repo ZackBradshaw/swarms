@@ -1,10 +1,11 @@
 import base64
 import os
-import requests
-import uuid
 import shutil
-from dotenv import load_dotenv
+import uuid
 from typing import List
+
+import requests
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -140,6 +141,18 @@ class StableDiffusion:
         return image_paths
 
     def generate_and_move_image(self, prompt, iteration, folder_path):
+        """
+        Generates an image based on the given prompt and moves it to the specified folder.
+
+        Args:
+            prompt (str): The prompt used to generate the image.
+            iteration (int): The iteration number.
+            folder_path (str): The path to the folder where the image will be moved.
+
+        Returns:
+            str: The path of the moved image.
+
+        """
         # Generate the image
         image_paths = self.run(prompt)
         if not image_paths:

@@ -1,7 +1,4 @@
-from typing import Dict, List
-
 from langchain.base_language import BaseLanguageModel
-from langchain.tools.base import BaseTool
 from langchain_experimental.autonomous_agents.hugginggpt.repsonse_generator import (
     load_response_generator,
 )
@@ -13,37 +10,11 @@ from langchain_experimental.autonomous_agents.hugginggpt.task_planner import (
 )
 from transformers import load_tool
 
-from swarms.agents.message import Message
+from swarms.structs.agent import Agent
+from swarms.utils.loguru_logger import logger
 
 
-class Step:
-    def __init__(
-        self,
-        task: str,
-        id: int,
-        dep: List[int],
-        args: Dict[str, str],
-        tool: BaseTool,
-    ):
-        self.task = task
-        self.id = id
-        self.dep = dep
-        self.args = args
-        self.tool = tool
-
-
-class Plan:
-    def __init__(self, steps: List[Step]):
-        self.steps = steps
-
-    def __str__(self) -> str:
-        return str([str(step) for step in self.steps])
-
-    def __repr(self) -> str:
-        return str(self)
-
-
-class OmniModalAgent:
+class OmniModalAgent(Agent):
     """
     OmniModalAgent
     LLM -> Plans -> Tasks -> Tools -> Response
@@ -72,9 +43,13 @@ class OmniModalAgent:
     def __init__(
         self,
         llm: BaseLanguageModel,
-        # tools: List[BaseTool]
+        verbose: bool = False,
+        *args,
+        **kwargs,
     ):
+        super().__init__(llm=llm, *args, **kwargs)
         self.llm = llm
+        self.verbose = verbose
 
         print("Loading tools...")
         self.tools = [
@@ -97,80 +72,29 @@ class OmniModalAgent:
             ]
         ]
 
+        # Load the chat planner and response generator
         self.chat_planner = load_chat_planner(llm)
         self.response_generator = load_response_generator(llm)
-        # self.task_executor = TaskExecutor
+        self.task_executor = TaskExecutor
         self.history = []
 
-    def run(self, input: str) -> str:
+    def run(self, task: str) -> str:
         """Run the OmniAgent"""
-        plan = self.chat_planner.plan(
-            inputs={
-                "input": input,
-                "hf_tools": self.tools,
-            }
-        )
-        self.task_executor = TaskExecutor(plan)
-        self.task_executor.run()
-
-        response = self.response_generator.generate(
-            {"task_execution": self.task_executor}
-        )
-
-        return response
-
-    def chat(self, msg: str = None, streaming: bool = False):
-        """
-        Run chat
-
-        Args:
-            msg (str, optional): Message to send to the agent. Defaults to None.
-            language (str, optional): Language to use. Defaults to None.
-            streaming (bool, optional): Whether to stream the response. Defaults to False.
-
-        Returns:
-            str: Response from the agent
-
-        Usage:
-        --------------
-        agent = MultiModalAgent()
-        agent.chat("Hello")
-
-        """
-
-        # add users message to the history
-        self.history.append(Message("User", msg))
-
-        # process msg
         try:
-            response = self.agent.run(msg)
+            plan = self.chat_planner.plan(
+                inputs={
+                    "input": task,
+                    "hf_tools": self.tools,
+                }
+            )
+            self.task_executor = TaskExecutor(plan)
+            self.task_executor.run()
 
-            # add agent's response to the history
-            self.history.append(Message("Agent", response))
+            response = self.response_generator.generate(
+                {"task_execution": self.task_executor}
+            )
 
-            # if streaming is = True
-            if streaming:
-                return self._stream_response(response)
-            else:
-                response
-
+            return response
         except Exception as error:
-            error_message = f"Error processing message: {str(error)}"
-
-            # add error to history
-            self.history.append(Message("Agent", error_message))
-
-            return error_message
-
-    def _stream_response(self, response: str = None):
-        """
-        Yield the response token by token (word by word)
-
-        Usage:
-        --------------
-        for token in _stream_response(response):
-            print(token)
-
-        """
-        for token in response.split():
-            yield token
+            logger.error(f"Error running the agent: {error}")
+            return f"Error running the agent: {error}"

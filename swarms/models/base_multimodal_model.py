@@ -1,8 +1,6 @@
 import asyncio
 import base64
 import concurrent.futures
-import logging
-import os
 import time
 from abc import abstractmethod
 from concurrent.futures import ThreadPoolExecutor
@@ -69,7 +67,7 @@ class BaseMultiModalModel:
 
     def __init__(
         self,
-        model_name: Optional[str],
+        model_name: Optional[str] = None,
         temperature: Optional[int] = 0.5,
         max_tokens: Optional[int] = 500,
         max_workers: Optional[int] = 10,
@@ -100,13 +98,20 @@ class BaseMultiModalModel:
 
     @abstractmethod
     def run(
-        self, task: Optional[str], img: Optional[str], *args, **kwargs
+        self,
+        task: Optional[str] = None,
+        img: Optional[str] = None,
+        *args,
+        **kwargs,
     ):
         """Run the model"""
-        pass
 
     def __call__(
-        self, task: str = None, img: str = None, *args, **kwargs
+        self,
+        task: Optional[str] = None,
+        img: Optional[str] = None,
+        *args,
+        **kwargs,
     ):
         """Call the model
 
@@ -121,7 +126,6 @@ class BaseMultiModalModel:
 
     async def arun(self, task: str, img: str, *args, **kwargs):
         """Run the model asynchronously"""
-        pass
 
     def get_img_from_web(self, img: str, *args, **kwargs):
         """Get the image from the web"""
@@ -288,7 +292,6 @@ class BaseMultiModalModel:
     @abstractmethod
     def generate_summary(self, text: str) -> str:
         """Generate Summary"""
-        pass
 
     def set_temperature(self, value: float):
         """Set Temperature"""

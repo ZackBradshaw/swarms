@@ -1,5 +1,7 @@
+from unittest.mock import Mock, patch
+
 import pytest
-from unittest.mock import patch, Mock
+
 from swarms.models.gemini import Gemini
 
 
@@ -110,7 +112,7 @@ def test_gemini_init_missing_api_key():
     with pytest.raises(
         ValueError, match="Please provide a Gemini API key"
     ):
-        model = Gemini(gemini_api_key=None)
+        Gemini(gemini_api_key=None)
 
 
 # Test Gemini initialization with missing model name
@@ -118,7 +120,7 @@ def test_gemini_init_missing_model_name():
     with pytest.raises(
         ValueError, match="Please provide a model name"
     ):
-        model = Gemini(model_name=None)
+        Gemini(model_name=None)
 
 
 # Test Gemini run method with empty task

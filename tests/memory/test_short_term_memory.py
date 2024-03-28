@@ -1,6 +1,6 @@
-import pytest
-from swarms.memory.short_term_memory import ShortTermMemory
 import threading
+
+from swarms.memory.short_term_memory import ShortTermMemory
 
 
 def test_init():

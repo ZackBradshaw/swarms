@@ -184,7 +184,7 @@ def test_save_different_memory(basic_flow, tmp_path):
     file_path = tmp_path / "memory.json"
     basic_flow.memory.append(["Task1", "Task2", "Task3"])
     basic_flow.save(file_path)
-    with open(file_path, "r") as f:
+    with open(file_path) as f:
         data = json.load(f)
     assert data == [["Task1", "Task2", "Task3"]]
 
@@ -347,7 +347,7 @@ def test_flow_response_filtering(flow_instance):
 def test_flow_undo_last(flow_instance):
     # Test the undo functionality
     response1 = flow_instance.run("Task 1")
-    response2 = flow_instance.run("Task 2")
+    flow_instance.run("Task 2")
     previous_state, message = flow_instance.undo_last()
     assert response1 == previous_state
     assert "Restored to" in message
@@ -577,7 +577,7 @@ def test_flow_rollback(flow_instance):
     # Test rolling back to a previous state
     state1 = flow_instance.get_state()
     flow_instance.change_prompt("New prompt")
-    state2 = flow_instance.get_state()
+    flow_instance.get_state()
     flow_instance.rollback_to_state(state1)
     assert (
         flow_instance.get_current_prompt() == state1["current_prompt"]

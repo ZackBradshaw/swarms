@@ -1,7 +1,7 @@
 from abc import ABC
 from typing import Any, Dict, List, Literal, TypedDict, Union, cast
 
-from pydantic import BaseModel, PrivateAttr
+from pydantic import ConfigDict, BaseModel, PrivateAttr
 
 
 class BaseSerialized(TypedDict):
@@ -54,7 +54,7 @@ class Serializable(BaseModel, ABC):
         Return a map of constructor argument names to secret ids.
         eg. {"openai_api_key": "OPENAI_API_KEY"}
         """
-        return dict()
+        return {}
 
     @property
     def lc_attributes(self) -> Dict:
@@ -65,8 +65,7 @@ class Serializable(BaseModel, ABC):
         """
         return {}
 
-    class Config:
-        extra = "ignore"
+    model_config = ConfigDict(extra="ignore")
 
     _lc_kwargs = PrivateAttr(default_factory=dict)
 
@@ -80,7 +79,7 @@ class Serializable(BaseModel, ABC):
         if not self.lc_serializable:
             return self.to_json_not_implemented()
 
-        secrets = dict()
+        secrets = {}
         # Get latest values for kwargs if there is an attribute with same name
         lc_kwargs = {
             k: getattr(self, k, v)

@@ -1,20 +1,16 @@
 import logging
 import os
 import warnings
-import sys
 
 
 def disable_logging():
-    log_file = open("errors.txt", "w")
-    sys.stderr = log_file
-
     warnings.filterwarnings("ignore", category=UserWarning)
 
     # disable tensorflow warnings
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
     # Set the logging level for the entire module
-    logging.basicConfig(level=logging.WARNING)
+    logging.basicConfig(level=logging.ERROR)
 
     try:
         log = logging.getLogger("pytorch")
@@ -29,8 +25,24 @@ def disable_logging():
         "numexpr",
         "git",
         "wandb.docker.auth",
+        "langchain",
+        "distutils",
+        "urllib3",
+        "elasticsearch",
+        "packaging",
     ]:
         logger = logging.getLogger(logger_name)
-        logger.setLevel(
-            logging.WARNING
-        )  # Supress DEBUG and info logs
+        logger.setLevel(logging.CRITICAL)
+
+    # Remove all existing handlers
+    logging.getLogger().handlers = []
+
+    # Create a file handler to log errors to the file
+    file_handler = logging.FileHandler("errors.txt")
+    file_handler.setLevel(logging.ERROR)
+    logging.getLogger().addHandler(file_handler)
+
+    # Create a stream handler to log errors to the terminal
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(logging.ERROR)
+    logging.getLogger().addHandler(stream_handler)

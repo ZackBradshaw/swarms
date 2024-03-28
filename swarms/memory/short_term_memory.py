@@ -1,11 +1,32 @@
-import logging
-from swarms.structs.base import BaseStructure
-import threading
 import json
-import os
+import logging
+import threading
+
+from swarms.structs.base import BaseStructure
 
 
 class ShortTermMemory(BaseStructure):
+    """Short term memory.
+
+    Args:
+    return_str (bool, optional): _description_. Defaults to True.
+    autosave (bool, optional): _description_. Defaults to True.
+    *args: _description_
+    **kwargs: _description_
+
+
+    Example:
+    >>> from swarms.memory.short_term_memory import ShortTermMemory
+    >>> stm = ShortTermMemory()
+    >>> stm.add(role="agent", message="Hello world!")
+    >>> stm.add(role="agent", message="How are you?")
+    >>> stm.add(role="agent", message="I am fine.")
+    >>> stm.add(role="agent", message="How are you?")
+    >>> stm.add(role="agent", message="I am fine.")
+
+
+    """
+
     def __init__(
         self,
         return_str: bool = True,
@@ -68,6 +89,14 @@ class ShortTermMemory(BaseStructure):
     def update_short_term(
         self, index, role: str, message: str, *args, **kwargs
     ):
+        """Update the short term memory.
+
+        Args:
+            index (_type_): _description_
+            role (str): _description_
+            message (str): _description_
+
+        """
         self.short_term_memory[index] = {
             "role": role,
             "message": message,
@@ -153,7 +182,7 @@ class ShortTermMemory(BaseStructure):
         """
         try:
             with self.lock:
-                with open(filename, "r") as f:
+                with open(filename) as f:
                     data = json.load(f)
                 self.short_term_memory = data.get(
                     "short_term_memory", []
