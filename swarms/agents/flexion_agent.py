@@ -69,6 +69,10 @@ class ReflexionMemory:
         Args:
             entry (Dict[str, Any]): Memory entry containing task, response, evaluation, etc.
         """
+        # If a non-dict entry (e.g., a plain string) is provided, wrap it
+        if not isinstance(entry, dict):
+            entry = {"reflection": str(entry)}
+
         # Add timestamp to track when memories were created
         entry["timestamp"] = datetime.now().isoformat()
         self.short_term_memory.append(entry)
@@ -84,6 +88,10 @@ class ReflexionMemory:
         Args:
             entry (Dict[str, Any]): Memory entry containing task, response, evaluation, etc.
         """
+        # If a non-dict entry (e.g., a plain string) is provided, wrap it
+        if not isinstance(entry, dict):
+            entry = {"reflection": str(entry)}
+
         entry["timestamp"] = datetime.now().isoformat()
 
         # Check if similar entry exists to avoid duplication
@@ -121,7 +129,15 @@ class ReflexionMemory:
 
         # Score and combine memories from both short and long-term
         all_memories = self.short_term_memory + self.long_term_memory
+        # Ensure memories are dict-like; wrap non-dict entries
+        normalized_memories = []
         for memory in all_memories:
+            if not isinstance(memory, dict):
+                normalized_memories.append({"reflection": str(memory), "task": ""})
+            else:
+                normalized_memories.append(memory)
+
+        for memory in normalized_memories:
             relevance = self._calculate_relevance(memory, task)
             scored_memories.append((memory, relevance))
 
@@ -316,12 +332,15 @@ Focus on extracting lasting insights that will be valuable for improving future 
         # Construct prompt with relevant memories if available
         prompt = task
         if relevant_memories and len(relevant_memories) > 0:
-            memories_text = "\n\n".join(
-                [
-                    f"PAST REFLECTION: {memory.get('reflection', 'No reflection available')}"
-                    for memory in relevant_memories
-                ]
-            )
+            reflection_texts = []
+            for memory in relevant_memories:
+                if isinstance(memory, dict):
+                    reflection_texts.append(memory.get("reflection", "No reflection available"))
+                else:
+                    reflection_texts.append(str(memory))
+
+            memories_text = "\n\n".join([f"PAST REFLECTION: {r}" for r in reflection_texts])
+
             prompt = f"""TASK: {task}
 
 RELEVANT PAST REFLECTIONS:
